@@ -70,12 +70,13 @@
                         <p class="card-text">
                             Sistema de autogestion de sociedades de fomento creado en conjunto con mi compañero de
                             proyecto
-                            <a href="https://www.linkedin.com/in/cristian-villavicencio-19572a177/"><strong>@Cristian</strong>
+                            <a href="https://www.linkedin.com/in/cristian-villavicencio-19572a177/" target="_blank"
+                                rel="noopener noreferrer"><strong>@Cristian</strong>
                             </a>
                         </p>
                         <div class="alert alert-warning" role="alert">
                             No tiene vista online por que la sociedad de fomento no tenia internet.
-                            pero a futuro podria tener una vista online.
+                            pero a futuro podria tener una vista online a modo demo
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-around">
                             <a href="./FomentAR.html" class="btn btn-primary w-100 d-block">Acerca de este proyecto</a>
@@ -164,9 +165,10 @@
                 <div class="card-body">
                     <h5 class="card-title">Acerca de mi</h5>
                     <p class="card-text">
-                        Soy un joven desarrollador web, con una gran capacidad de aprendizaje y
-                        trabajo. Me encanta la tecnología y la programación, me gusta aprender nuevas tecnologías y
-                        desarrollar aplicaciones web.</p>
+                        Soy un joven desarrollador web, con una gran capacidad de aprendizaje, facil adaptacion a
+                        trabajos en grupo
+                        y en busqueda de su primer empleo.
+                    </p>
                     <p class="card-text">Redes:</p>
                     <ul class="list-inline">
                         <li class="list-inline-item">
@@ -220,9 +222,6 @@
         <div class="card mx-auto my-2" style="max-width: 85%;max-height:1%;" id="contacto">
             <div class="card-body">
                 <h5 class="card-title">Contacto</h5>
-                <p class="card-text">
-                    Si tienes alguna duda o sugerencia, puedes contactarme a través de los siguientes medios:
-                </p>
                 <ul class="list-inline">
                     <li class="list-inline-item"><a href="https://www.linkedin.com/in/gabrielsebastianbrindo/"
                             target="_blank" rel="noopener noreferrer"><i
@@ -233,18 +232,21 @@
                     </li>
                     </a>
                 </ul>
-                <form action="">
+                <form action="https://formspree.io/f/xzbojbry" method="POST">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Nombre</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre"
+                            name="nombre">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="asunto"
+                            name="asunto">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Mensaje</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"
+                            name="mensaje"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary mt-2 btn-block w-100">Enviar</button>
                 </form>
