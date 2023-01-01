@@ -58,7 +58,7 @@ body {
 }
 
 .texto-tarjeta {
-  max-height: 75vh;
+  max-height: 74vh;
   overflow-y: auto;
 
   width: 100%;
