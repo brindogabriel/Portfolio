@@ -48,8 +48,6 @@ body {
   margin-left: 0;
   padding: 0;
 
-  overflow: auto;
-  position: fixed;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6hyd6IuZAaYeNTzmVMzUUBYZSJVHt6C3zHQ&usqp=CAU");
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,8 +58,8 @@ body {
 }
 
 .texto-tarjeta {
-  max-height: 70vh;
-  overflow: auto;
+  max-height: 75vh;
+  overflow-y: auto;
 
   width: 100%;
 }
