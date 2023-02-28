@@ -1,3 +1,3 @@
-# Portfolio
+# Mi Portfolio
 
-## ESTE ES MI PORTFOLIO
+¡Bienvenido a mi portfolio! Aquí podrás encontrar información sobre mí, mis habilidades y proyectos recientes.
