@@ -38,6 +38,6 @@ FomentAR fue desarrollado utilizando HTML, CSS, JavaScript, PHP, MySQL , Bootstr
 
 ## 📞 Contacto
 
-🌐 LinkedIn: [Tu perfil en LinkedIn](https://www.linkedin.com/in/gabrielsebastianbrindo)
+🌐 LinkedIn: [Gabriel Sebastian Brindo](https://www.linkedin.com/in/gabrielsebastianbrindo)
 
 ¡Estoy disponible para nuevos proyectos y oportunidades emocionantes! No dudes en contactarme si necesitas un desarrollador web entusiasta y comprometido.
