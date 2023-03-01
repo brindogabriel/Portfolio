@@ -32,10 +32,6 @@ FomentAR fue desarrollado utilizando HTML, CSS, JavaScript, PHP, MySQL , Bootstr
 
 🚀 El enlace al repositorio es: [FomentAR](https://github.com/brindogabriel/FomentAR)
 
-### Proyecto X
-
-📈 Aquí puedes agregar una breve descripción de otro proyecto y un enlace al repositorio. ¡Pronto tendré más proyectos para compartir!
-
 ## 📞 Contacto
 
 🌐 LinkedIn: [Gabriel Sebastian Brindo](https://www.linkedin.com/in/gabrielsebastianbrindo)
