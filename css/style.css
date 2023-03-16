@@ -60,6 +60,10 @@ body {
 .texto-tarjeta {
   max-height: 74vh;
   overflow-y: auto;
-
   width: 100%;
+}
+
+.card {
+  overflow: auto;
+  max-height: 400px; /* ajusta el valor a tu preferencia */
 }
