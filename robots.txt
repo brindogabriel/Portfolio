@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /https://www.gabrielbrindo.com.ar/
+
+Disallow: /https://www.gabrielbrindo.com.ar/FomentAR
+Disallow: /https://www.gabrielbrindo.com.ar/CopyPast
+
+
+Sitemap: https://www.gabrielbrindo.com.ar/sitemap.xml
