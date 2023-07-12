@@ -3,6 +3,7 @@ Allow: /https://www.gabrielbrindo.com.ar/
 
 Disallow: /https://www.gabrielbrindo.com.ar/FomentAR
 Disallow: /https://www.gabrielbrindo.com.ar/CopyPast
+Disallow: /https://www.gabrielbrindo.com.ar/assets/CV_GABRIEL_BRINDO.pdf
 
 
 Sitemap: https://www.gabrielbrindo.com.ar/sitemap.xml
