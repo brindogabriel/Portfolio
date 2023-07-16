@@ -2,6 +2,7 @@
   <url>
     <loc>https://www.gabrielbrindo.com.ar/</loc>
     <changefreq>hourly</changefreq>
+     <priority>1</priority>
   </url>
   <url>
   <loc>https://www.gabrielbrindo.com.ar/FomentAR</loc>
@@ -9,6 +10,10 @@
   </url>
   <url>
     <loc>https://www.gabrielbrindo.com.ar/CopyPast</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.gabrielbrindo.com.ar/thanks.html</loc>
     <changefreq>hourly</changefreq>
   </url>
 </urlset>
