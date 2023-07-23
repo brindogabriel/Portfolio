@@ -5,6 +5,7 @@ Disallow: /https://www.gabrielbrindo.com.ar/FomentAR
 Disallow: /https://www.gabrielbrindo.com.ar/CopyPast
 Disallow: /https://www.gabrielbrindo.com.ar/assets/CV_GABRIEL_BRINDO.pdf
 Disallow: /https://www.gabrielbrindo.com.ar/assets
+Disallow: /https://www.gabrielbrindo.com.ar/assets/
 
 
 Sitemap: https://www.gabrielbrindo.com.ar/sitemap.xml
