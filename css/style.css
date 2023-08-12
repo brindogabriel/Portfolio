@@ -75,3 +75,16 @@ body {
   max-height: 400px; /* ajusta el valor a tu preferencia */
 }
 
+.descripcionn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    margin: auto;
+    align-content: center;
+}
+
+.descripcion-mia{
+    background: #000;
+    color: aliceblue;
+}
