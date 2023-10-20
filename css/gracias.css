@@ -7,3 +7,7 @@ body {
     background-color: rgb(128, 127, 127);
 }
 
+.btn{
+    width: 75%;
+    margin-top: 2%;
+}
