@@ -70,10 +70,7 @@ body {
   width: 100%;
 }
 
-.card {
-  overflow: auto;
-  max-height: 400px; /* ajusta el valor a tu preferencia */
-}
+
 
 .descripcionn{
     display: flex;
