@@ -728,20 +728,10 @@
                             name="asunto"
                             value="Propuesta de trabajo"
                         />
-                        <div class="form-group">
-                            <label
-                                for="exampleFormControlTextarea1"
-                                class="form-label"
-                                >Mensaje</label
-                            >
-                            <textarea
-                                class="form-control"
-                                id="exampleFormControlTextarea1"
-                                rows="3"
-                                required="true"
-                                name="mensaje"
-                            ></textarea>
-                        </div>
+                        <div class="form-floating mt-2">
+                            <textarea class="form-control" name="mensaje" placeholder="Escribí tu mensaje" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Dejame tu mensaje acá</label>
+                          </div>
                         <input type="hidden" name="_captcha" value="false" />
                         <input
                             type="hidden"
