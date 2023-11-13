@@ -1,15 +1,21 @@
 User-Agent: *
+
 Allow: /
+
 Disallow: /FomentAR.html/
 Disallow: /FomentAR.html
+Disallow: FomentAR.html
 Disallow: /CopyPast.html/
 Disallow: /CopyPast.html
-Disallow: /MetalurgicaArribas.html/
+Disallow: CopyPast.html
 Disallow: /MetalurgicaArribas.html
+Disallow: MetalurgicaArribas.html
+Disallow: /MetalurgicaArribas.html/
 Disallow: /assets/CV_GABRIEL_BRINDO.pdf/
 Disallow: /assets/CV_GABRIEL_BRINDO.pdf
 Disallow: /assets
 Disallow: /assets/
 Disallow: /thanks.html/
 Disallow: /thanks.html
+
 Sitemap: https://www.gabrielbrindo.com.ar/sitemap.xml
