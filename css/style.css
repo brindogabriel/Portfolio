@@ -86,6 +86,6 @@ body {
     color: aliceblue;
 }
 
-.imagen img {
-    border-radius: 50%;
+.imagen img{
+    margin-top: 6%;
   }
