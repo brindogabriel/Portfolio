@@ -5,7 +5,8 @@ body {
 }
 
 body {
-  background-color: #f5f5f5;
+  background-image  : #f5f5f5;
+  background-image: url("../assets/wsp3.png");
 }
 .gracias{
    display: flex;
