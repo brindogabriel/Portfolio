@@ -14,6 +14,7 @@
 - React ⚛️
 - Laravel 🔥
 - Bootstrap 🎉
+- TailwindCSS ✨
 
 ### Habilidades generales 🌟
 
