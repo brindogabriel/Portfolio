@@ -19,6 +19,7 @@
 ### Habilidades generales 🌟
 
 - Scrum 📈
+- Aprendizaje Continuo 📈
 - Proactivo 💪
 - Facilidad de adaptación 🌀
 - Git 🌲
