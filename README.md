@@ -11,8 +11,8 @@
 - JavaScript 🚀
 - PHP 🐘
 - MySQL 🗄️
-- React (aun aprendiendo) ⚛️
-- Laravel (aun aprendiendo) 🔥
+- React ⚛️
+- Laravel 🔥
 - Bootstrap 🎉
 
 ### Habilidades generales 🌟
@@ -22,15 +22,6 @@
 - Facilidad de adaptación 🌀
 - Git 🌲
 
-## 🚀 Proyectos destacados
-
-### FomentAR - Sistema de gestión para sociedades de fomento
-
-🏭 FomentAR es un sistema de gestión que desarrollé con el objetivo de mejorar la administración de una sociedad de fomento en mi ciudad. El proyecto permite llevar un registro de socios, administrar pagos.
-
-FomentAR fue desarrollado utilizando HTML, CSS, JavaScript, PHP, MySQL , Bootstrap, FullCalendar, Select2 y DataTables.
-
-🚀 El enlace al repositorio es: [FomentAR](https://github.com/brindogabriel/FomentAR)
 
 ## 📞 Contacto
 
