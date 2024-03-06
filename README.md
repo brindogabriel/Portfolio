@@ -1,4 +1,4 @@
-# 👨‍💻 Mi Portfolio 
+# 👨‍💻 Mi Portfolio
 
 🚀 Soy un desarrollador web full stack en busca de mi primer trabajo. Me encanta aprender cosas nuevas y estoy dispuesto a trabajar duro para crecer profesionalmente.
 
@@ -14,7 +14,7 @@
 - React ⚛️
 - Laravel 🔥
 - Bootstrap 🎉
-- TailwindCSS ✨
+- TailwindCSSCSS ✨
 
 ### Habilidades generales 🌟
 
@@ -23,7 +23,6 @@
 - Proactivo 💪
 - Facilidad de adaptación 🌀
 - Git 🌲
-
 
 ## 📞 Contacto
 
