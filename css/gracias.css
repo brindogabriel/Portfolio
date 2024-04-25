@@ -5,6 +5,15 @@ body {
     min-height: 100vh;
     margin: 0;
     background-color: rgb(128, 127, 127);
+   
+    color-scheme: dark;
+    background-color: Canvas;
+    color: CanvasText;
+    
+}
+
+h2{
+    color: aliceblue;
 }
 
 .btn{
