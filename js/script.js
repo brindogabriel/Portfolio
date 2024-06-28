@@ -10,15 +10,16 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 var scrollSpy = new bootstrap.ScrollSpy(document.body, {
     target: '#navbar-example'
 })
-
-
-window.onscroll = function () {
+document.addEventListener("DOMContentLoaded", function() {
     var botonIrArriba = document.getElementById("botonIrArriba");
+    botonIrArriba.style.display = "none"; // Asegura que el botón esté oculto al cargar la página
 
-    // Verifica si el desplazamiento vertical es mayor que 0
-    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-        botonIrArriba.style.display = "block"; // Muestra el botón
-    } else {
-        botonIrArriba.style.display = "none"; // Oculta el botón
-    }
-};
+    window.onscroll = function () {
+        // Verifica si el desplazamiento vertical es mayor que 100px
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            botonIrArriba.style.display = "block"; // Muestra el botón
+        } else {
+            botonIrArriba.style.display = "none"; // Oculta el botón
+        }
+    };
+});
