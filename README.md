@@ -1,28 +1,28 @@
 # 👨‍💻 Mi Portfolio
 
-🚀 Soy un desarrollador web full stack en busca de mi primer trabajo. Me encanta aprender cosas nuevas y estoy dispuesto a trabajar duro para crecer profesionalmente.
+🚀 Soy un desarrollador web en busca de mi primer trabajo. Me encanta aprender cosas nuevas y estoy dispuesto a trabajar duro para crecer profesionalmente.
 
 ## 🎓 Habilidades
 
 ### Lenguajes de programación y frameworks 🔨
 
-- HTML5 🌐
-- CSS3 🎨
-- JavaScript 🚀
-- PHP 🐘
-- MySQL 🗄️
-- React ⚛️
-- Laravel 🔥
-- Bootstrap 🎉
-- TailwindCSSCSS ✨
+-   HTML5 🌐
+-   CSS3 🎨
+-   JavaScript 🚀
+-   PHP 🐘
+-   MySQL 🗄️
+-   React ⚛️
+-   Laravel 🔥
+-   Bootstrap 🎉
+-   TailwindCSSCSS ✨
 
 ### Habilidades generales 🌟
 
-- Scrum 📈
-- Aprendizaje Continuo 📈
-- Proactivo 💪
-- Facilidad de adaptación 🌀
-- Git 🌲
+-   Scrum 📈
+-   Aprendizaje Continuo 📈
+-   Proactivo 💪
+-   Facilidad de adaptación 🌀
+-   Git 🌲
 
 ## 📞 Contacto
 
