@@ -20,7 +20,7 @@ export default function Banner() {
                 {/* Tu foto personal */}
                 <div className="mb-8">
                     <Image
-                        src="/images/Yo.png" // Reemplaza esto con la ruta de tu foto
+                        src="/images/Yo.png"
                         alt="Tu nombre"
                         width={150}
                         height={150}
