@@ -26,21 +26,34 @@ export const metadata: Metadata = {
     openGraph: {
         locale: "es_AR",
         title: "Gabriel Brindo | Desarrollador Web",
-        images: "https://www.gabrielbrindo.com.ar/favicon.ico",
         description:
             "¡Gabriel Brindo, desarrollador web argentino! Ofrezco creatividad y funcionalidad en proyectos web personalizados. Experto en HTML, CSS, JavaScript y frameworks modernos. ¡Contáctame para transformar tus ideas en realidad digital! 🚀",
         url: "https://www.gabrielbrindo.com.ar/",
+        siteName: "Gabriel Brindo",
+        images: [
+            {
+                url: " https://www.gabrielbrindo.com.ar/favicon.ico",
+                width: 1200,
+                height: 630,
+                alt: "Logo",
+            },
+        ],
+
+        type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        creator: "@gabriel_brindo",
         title: "Gabriel Brindo | Desarrollador Web",
         description:
             "¡Gabriel Brindo, desarrollador web argentino! Ofrezco creatividad y funcionalidad en proyectos web personalizados. Experto en HTML, CSS, JavaScript y frameworks modernos. ¡Contáctame para transformar tus ideas en realidad digital! 🚀",
+        images: ["https://www.gabrielbrindo.com.ar/images/favicon.ico"],
     },
     icons: {
-        shortcut: "./favicon.ico",
+        icon: "/images/logo.webp",
+        shortcut: "/images/logo.webp",
+        apple: "/images/logo.webp",
     },
+    applicationName: "Gabriel Brindo",
 };
 
 export default function RootLayout({
@@ -60,4 +73,3 @@ export default function RootLayout({
         </html>
     );
 }
-
