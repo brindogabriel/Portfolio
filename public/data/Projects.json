@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "FomentAR",
+        "description": "Sistema de autogestion de sociedades de fomento creado en conjunto con mi compañero de proyecto",
+        "tecnologies": [
+            "PHP",
+            "MYSQL",
+            "BOOTSTRAP",
+            "JAVASCRIPT",
+            "HTML",
+            "GIT",
+            "CSS",
+            "SELECT2",
+            "DATATABLES",
+            "FULLCALENDAR"
+        ],
+        "coworker": {
+            "name": "Cristian Villavicencio",
+            "linkedin": "https://www.linkedin.com/in/cristian-villavicencio-19572a177/"
+        },
+        "githubLink": "https://github.com/brindogabriel/FomentAR",
+        "defaultCredentials": {
+            "username": "presidente",
+            "password": "presidente"
+        }
+    },
+    {
+        "id": 2,
+        "name": "CopyPast",
+        "description": "E-commerce real, desarrollado para un emprendimiento, que busca mostrar sus productos, potenciar sus ventas y aumentar su prescencia online, y alcance en redes sociales el cual se encuentra en La Matanza, Buenos Aires.",
+        "tecnologies": [
+            "React",
+            "Node.js",
+            "Supabase",
+            "Nextjs",
+            "TailwindCSS"
+        ],
+        "liveLink": "https://www.copypast.com.ar"
+    },
+    {
+        "id": 3,
+        "name": "Sillones ArmoniayRelax",
+        "description": "E-commerce real, desarrollado para un emprendimiento, que busca mostrar sus productos, potenciar sus ventas y aumentar su prescencia online",
+        "tecnologies": [
+            "React",
+            "Node.js",
+            "Supabase",
+            "Nextjs",
+            "TailwindCSS"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "WhaChatGenLink",
+        "description": "Enviar WhatsApp sin tener agendado el numero",
+        "tecnologies": [
+            "React",
+            "Nextjs",
+            "TailwindCSS",
+            "TypeScript"
+        ],
+        "githubLink": "https://github.com/brindogabriel/WhaChatGenLink",
+        "liveLink": "https://wha-chat-gen-link.vercel.app/"
+    }
+]
