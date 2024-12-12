@@ -49,9 +49,9 @@ export const metadata: Metadata = {
         images: ["https://www.gabrielbrindo.com.ar/images/favicon.ico"],
     },
     icons: {
-        icon: "/images/logo.webp",
-        shortcut: "/images/logo.webp",
-        apple: "/images/logo.webp",
+        icon: "/images/favicon.ico",
+        shortcut: "/images/favicon.ico",
+        apple: "/images/favicon.ico",
     },
     applicationName: "Gabriel Brindo",
 };
