@@ -25,7 +25,7 @@ export default function ContactForm() {
                     <ul className="flex flex-wrap justify-center gap-4">
                         <li>
                             <a
-                                href="https://www.linkedin.com/in/gabrielsebastianbrindo/"
+                                href="https://www.linkedin.com/in/gabrielsebastianbrindo"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="transition-transform transform hover:scale-105"
