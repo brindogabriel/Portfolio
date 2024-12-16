@@ -15,7 +15,7 @@ export default function Page() {
                 </h2>
                 <a
                     href="./"
-                    className="inline-block mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
+                    className="w-72 inline-block mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
                 >
                     Volver
                 </a>
