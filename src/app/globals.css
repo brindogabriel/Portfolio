@@ -12,11 +12,6 @@
     }
 }
 
-textarea {
-    field-sizing: content;
-    max-height: 150px;
-}
-
 body {
     color: var(--foreground);
     background: var(--background);
