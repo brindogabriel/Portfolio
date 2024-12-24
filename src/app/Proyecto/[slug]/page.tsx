@@ -20,7 +20,9 @@ export async function generateStaticParams() {
     }));
 }
 
-export default async function ProjectPage({ params }: ProjectPageProps) {
+export default async function ProjectPage({
+    params,
+}: Awaited<ProjectPageProps>) {
     const { slug } = params;
     const response = await fetch(
         new URL("/data/Projects.json", process.env.NEXT_PUBLIC_BASE_URL)
