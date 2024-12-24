@@ -29,3 +29,8 @@ export interface DescriptionClass {
     problema:     string;
     solucion:     string;
 }
+
+
+export type GalleryWithLightboxProps = {
+    images: ImageWithCaption[];
+};

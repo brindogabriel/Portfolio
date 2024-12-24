@@ -2,7 +2,15 @@
 "use client";
 
 import { useState } from "react";
-import { GalleryWithLightboxProps } from "@/app/types";
+
+type ImageWithCaption = {
+    src: string;
+    caption: string;
+};
+
+type GalleryWithLightboxProps = {
+    images: ImageWithCaption[];
+};
 
 export default function GalleryWithLightbox({
     images,
@@ -61,7 +69,8 @@ export default function GalleryWithLightbox({
             {/* Lightbox */}
             {isOpen && currentIndex !== null && (
                 <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-                    <div className="relative">
+                    <div className="relative flex flex-col items-center">
+                        {/* Imagen con tamaño controlado */}
                         <img
                             className="max-w-[90vw] max-h-[80vh] rounded-lg"
                             src={images[currentIndex].src}
@@ -73,27 +82,29 @@ export default function GalleryWithLightbox({
 
                         {/* Botón cerrar */}
                         <button
-                            className="absolute top-4 right-4 text-white text-3xl cursor-pointer"
+                            className="absolute top-4 right-4 text-white text-3xl bg-black bg-opacity-60 p-2 rounded-full"
                             onClick={closeLightbox}
                         >
                             &times;
                         </button>
 
                         {/* Botones de navegación */}
-                        <button
-                            className="absolute cursor-pointer left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl"
-                            onClick={prevImage}
-                            disabled={currentIndex === 0}
-                        >
-                            &#8249;
-                        </button>
-                        <button
-                            className="absolute   cursor-pointer right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl"
-                            onClick={nextImage}
-                            disabled={currentIndex === images.length - 1}
-                        >
-                            &#8250;
-                        </button>
+                        {currentIndex > 0 && (
+                            <button
+                                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-60 p-2 rounded-full"
+                                onClick={prevImage}
+                            >
+                                &#8249;
+                            </button>
+                        )}
+                        {currentIndex < images.length - 1 && (
+                            <button
+                                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-60 p-2 rounded-full"
+                                onClick={nextImage}
+                            >
+                                &#8250;
+                            </button>
+                        )}
                     </div>
                 </div>
             )}
