@@ -1,35 +1,17 @@
+import { GetServerSideProps } from "next";
 import { BsGlobe } from "react-icons/bs";
 import { Projects } from "@/app/types";
 import GalleryWithLightbox from "./components/GalleryWithLightbox";
 import { SiGithub } from "react-icons/si";
 
-type ProjectPageProps = {
-    params: Awaited<{
+interface ProjectPageProps {
+    params: {
         slug: string;
-    }>;
-};
-
-export async function generateStaticParams() {
-    const response = await fetch(
-        new URL("/data/Projects.json", process.env.NEXT_PUBLIC_BASE_URL)
-    );
-    const projects: Projects[] = await response.json();
-
-    return projects.map((project) => ({
-        slug: project.name,
-    }));
+    };
+    project: Projects | null;
 }
 
-export default async function ProjectPage({
-    params,
-}: Awaited<ProjectPageProps>) {
-    const { slug } = params;
-    const response = await fetch(
-        new URL("/data/Projects.json", process.env.NEXT_PUBLIC_BASE_URL)
-    );
-    const projects: Projects[] = await response.json();
-    const project = projects.find((project) => project.name === slug);
-
+const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
     if (!project) {
         return (
             <div className="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center">
@@ -137,4 +119,29 @@ export default async function ProjectPage({
             </div>
         </div>
     );
-}
+};
+
+export default ProjectPage;
+
+// getServerSideProps para cargar datos en cada solicitud
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    const { slug } = context.params as { slug: string };
+
+    // Obtenemos los proyectos desde el JSON
+    const response = await fetch(
+        new URL("/data/Projects.json", process.env.NEXT_PUBLIC_BASE_URL)
+    );
+    const projects: Projects[] = await response.json();
+
+    // Buscamos el proyecto por su slug
+    const project = projects.find((project) => project.name === slug) || null;
+
+    return {
+        props: {
+            params: {
+                slug,
+            },
+            project,
+        },
+    };
+};
