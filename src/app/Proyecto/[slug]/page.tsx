@@ -15,7 +15,7 @@ export default async function Page({
 
     // Obtén los proyectos desde un archivo JSON o API
     const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/data/Projects.json`
+        `${process.env.NEXT_PUBLIC_BASE_URL_PROD}/data/Projects.json`
     );
     const projects: Projects[] = await response.json();
 
