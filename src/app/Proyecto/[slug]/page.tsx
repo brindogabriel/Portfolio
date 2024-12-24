@@ -2,33 +2,37 @@ import { BsGlobe } from "react-icons/bs";
 import { Projects } from "@/app/types";
 import GalleryWithLightbox from "./components/GalleryWithLightbox";
 import { SiGithub } from "react-icons/si";
-import { notFound } from "next/navigation";
+import { notFound } from "next/navigation"; // Para manejar errores 404 en App Router
 
-// Generar parámetros estáticos para las rutas dinámicas
+// Generación de rutas estáticas para los slugs de los proyectos
 export async function generateStaticParams() {
     const response = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/data/Projects.json`
     );
     const projects: Projects[] = await response.json();
 
+    // Retornamos un arreglo de objetos con el 'slug' de cada proyecto
     return projects.map((project) => ({
         slug: project.name,
     }));
 }
 
-// Página de un proyecto, usando params directamente
+// Página de detalle de un proyecto
 const ProjectPage = async ({ params }: { params: { slug: string } }) => {
     const { slug } = params;
 
-    // Obtener datos del proyecto desde el JSON
+    // Obtenemos los proyectos desde el archivo JSON
     const response = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/data/Projects.json`
     );
     const projects: Projects[] = await response.json();
+
+    // Buscamos el proyecto correspondiente al 'slug' (nombre del proyecto)
     const project = projects.find((project) => project.name === slug);
 
     if (!project) {
-        notFound(); // Devuelve un 404 si no encuentra el proyecto
+        // Si no se encuentra el proyecto, retornamos un 404
+        notFound();
     }
 
     return (
