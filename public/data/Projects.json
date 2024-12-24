@@ -2,7 +2,24 @@
     {
         "id": 1,
         "name": "FomentAR",
-        "description": "Sistema de autogestion de sociedades de fomento creado en conjunto con mi compañero de proyecto",
+        "images": [
+            {
+                "src": "/images/fomentarimg/iniciofomentar.png",
+                "caption": "Primer imagen"
+            },
+            {
+                "src": "/images/fomentarimg/loginfomentar.png",
+                "caption": "Segunda imagen"
+            },
+            {
+                "src": "/images/fomentarimg/eventos.jpg",
+                "caption": "Tercer imagen"
+            },
+            {
+                "src": "/images/fomentarimg/basquetfomentar.png",
+                "caption": "Cuarta imagen"
+            }
+        ],
         "tecnologies": [
             "PHP",
             "MYSQL",
@@ -15,6 +32,11 @@
             "DATATABLES",
             "FULLCALENDAR"
         ],
+        "description": {
+            "presentacion": "Sistema de autogestion de sociedades de fomento, que permite la administración de socios, eventos, y actividades de la sociedad de fomento. ",
+            "problema": "El sistema anterior era un sistema de escritorio, que no permitía el acceso a la información de manera remota, y no era fácil de acceder.",
+            "solucion": "Desarrollar un sistema web, que permita la autogestión de la sociedad de fomento, y que permita el acceso a la información de manera remota, y fácil de acceder."
+        },
         "coworker": {
             "name": "Cristian Villavicencio",
             "linkedin": "https://www.linkedin.com/in/cristian-villavicencio-19572a177/"
@@ -28,7 +50,21 @@
     {
         "id": 2,
         "name": "CopyPast",
-        "description": "E-commerce real, desarrollado para un emprendimiento, que busca mostrar sus productos, potenciar sus ventas y aumentar su prescencia online, y alcance en redes sociales el cual se encuentra en La Matanza, Buenos Aires.",
+        "images": [
+            {
+                "src": "/images/copypast/iniciocopypast.png",
+                "caption": "Primer imagen"
+            },
+            {
+                "src": "/images/copypast/tabla.png",
+                "caption": "Primer imagen"
+            }
+        ],
+        "description": {
+            "presentacion": "E-commerce real, desarrollado para un emprendimiento, que busca mostrar sus productos, potenciar sus ventas y aumentar su prescencia online, y alcance en redes sociales el cual se encuentra en La Matanza, Buenos Aires.",
+            "problema": "El emprendimiento no contaba con una presencia online, y no podía mostrar sus productos de manera online.",
+            "solucion": "Desarrollar un e-commerce, que permita mostrar los productos, y que permita la compra de los mismos de manera online."
+        },
         "tecnologies": [
             "React",
             "Node.js",
@@ -40,8 +76,30 @@
     },
     {
         "id": 3,
-        "name": "Sillones ArmoniayRelax",
-        "description": "E-commerce real, desarrollado para un emprendimiento, que busca mostrar sus productos, potenciar sus ventas y aumentar su prescencia online",
+        "name": "SillonesArmoniayRelax",
+        "images": [
+            {
+                "src": "/images/sillones/sillones-armonia-y-relax.vercel.app_.png",
+                "caption": "Primer imagen"
+            },
+            {
+                "src": "/images/sillones/sillones-armonia-y-relax.vercel.app_product.png",
+                "caption": "Primer imagen"
+            },
+            {
+                "src": "/images/sillones/sillones-armonia-y-relax.vercel.app_contacto.png",
+                "caption": "Primer imagen"
+            },
+            {
+                "src": "/images/sillones/sillones-armonia-y-relax.vercel.app_carrito.png",
+                "caption": "Primer imagen"
+            }
+        ],
+        "description": {
+            "presentacion": "Ecommerce real de sillones",
+            "problema": "El emprendimiento no contaba con una presencia online, y no podía mostrar sus productos de manera online.",
+            "solucion": "Desarrollar un e-commerce, que permita mostrar los productos, y que permita la compra de los mismos de manera online."
+        },
         "tecnologies": [
             "React",
             "Node.js",
@@ -53,7 +111,21 @@
     {
         "id": 4,
         "name": "WhaChatGenLink",
-        "description": "Enviar WhatsApp sin tener agendado el numero",
+        "images": [
+            {
+                "src": "/images/WhaChatGenLink/light.png",
+                "caption": "Primer imagen"
+            },
+            {
+                "src": "/images/WhaChatGenLink/dark.png",
+                "caption": "Primer imagen"
+            }
+        ],
+        "description": {
+            "presentacion": "Una forma de enviar whatsapp sin tener agendado el numero, y sin tener que copiar y pegar el mensaje. ",
+            "problema": "El tener que agendar a cada numero para hablarle",
+            "solucion": "Desarrollar una web app que permita enviar mensajes de whatsapp sin tener que agendar el numero"
+        },
         "tecnologies": [
             "React",
             "Nextjs",

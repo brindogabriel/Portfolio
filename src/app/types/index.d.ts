@@ -1,19 +1,31 @@
-export interface Project {
-  id: number,
-  name: string,
-  description: string,
-  tecnologies: Tecnologies[],
+export interface Projects {
+    id:                  number;
+    name:                string;
+    images?:             Image[];
+    tecnologies:         string[];
+    description:         DescriptionClass ;
+    coworker?:           Coworker;
+    githubLink?:         string;
+    defaultCredentials?: DefaultCredentials;
+    liveLink?:           string;
+}
+export interface Coworker {
+    name:     string;
+    linkedin: string;
+}
 
- 
-   githubLink?: string;
-    liveLink?: string;
-    aboutit?: string;
-  defaultCredentials?: {
+export interface DefaultCredentials {
     username: string;
     password: string;
-  };
-  coworker?: {
-    name: string;
-    linkedin: string;
-  };
+}
+
+export interface ImageWithCaption {
+    src:     string;
+    caption: string;
+}
+
+export interface DescriptionClass {
+    presentacion: string;
+    problema:     string;
+    solucion:     string;
 }
