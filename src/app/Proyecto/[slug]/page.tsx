@@ -4,7 +4,7 @@ import GalleryWithLightbox from "./components/GalleryWithLightbox";
 import { SiGithub } from "react-icons/si";
 import { notFound } from "next/navigation";
 
-// Generar parámetros estáticos para rutas dinámicas
+// Generar parámetros estáticos para las rutas dinámicas
 export async function generateStaticParams() {
     const response = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/data/Projects.json`
@@ -16,11 +16,11 @@ export async function generateStaticParams() {
     }));
 }
 
-// Página del proyecto
+// Página de un proyecto, usando params directamente
 const ProjectPage = async ({ params }: { params: { slug: string } }) => {
     const { slug } = params;
 
-    // Obtener datos del proyecto en el servidor
+    // Obtener datos del proyecto desde el JSON
     const response = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/data/Projects.json`
     );
