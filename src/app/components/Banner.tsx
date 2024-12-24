@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { FolderIcon } from "lucide-react";
 
 export default function Banner() {
     return (
