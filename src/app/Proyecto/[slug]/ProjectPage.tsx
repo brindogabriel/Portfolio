@@ -6,23 +6,36 @@ import { SiGithub } from "react-icons/si";
 import { BsGlobe } from "react-icons/bs";
 import { BiArrowBack } from "react-icons/bi";
 import Snowfall from "react-snowfall";
+import { useEffect, useState } from "react";
 
 interface ProjectPageProps {
     project: Projects;
 }
 
 export default function ProjectPage({ project }: ProjectPageProps) {
+    const [snowflakeImage, setSnowflakeImage] =
+        useState<HTMLImageElement | null>(null);
+
+    useEffect(() => {
+        const image = new Image();
+        image.src = "/images/snow.png";
+        image.onload = () => {
+            setSnowflakeImage(image);
+        };
+    }, []);
+
     return (
         <>
             <div className="min-h-screen bg-gray-900 text-gray-100 py-12 px-4 sm:px-6 lg:px-8">
                 <Snowfall
-                    color="white"
                     snowflakeCount={100}
                     style={{
                         position: "fixed",
                         width: "100vw",
                         height: "100vh",
                     }}
+                    images={snowflakeImage ? [snowflakeImage] : undefined}
+                    radius={[10, 20]}
                 />
                 <div className="max-w-4xl mx-auto">
                     <div className="bg-gray-800 rounded-lg shadow-lg p-8">
@@ -69,8 +82,6 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                             </div>
                         </div>
 
-                        {/* Aquí podrías agregar tu galería o cualquier otro contenido */}
-                        {/* Galería con Lightbox */}
                         {project.images && project.images.length > 0 && (
                             <GalleryWithLightbox images={project.images} />
                         )}
