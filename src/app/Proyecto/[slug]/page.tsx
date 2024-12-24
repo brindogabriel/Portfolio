@@ -1,37 +1,34 @@
-import { GetServerSideProps } from "next";
 import { BsGlobe } from "react-icons/bs";
 import { Projects } from "@/app/types";
 import GalleryWithLightbox from "./components/GalleryWithLightbox";
 import { SiGithub } from "react-icons/si";
+import { notFound } from "next/navigation";
 
-interface ProjectPageProps {
-    params: {
-        slug: string;
-    };
-    project: Projects | null;
+// Generar parámetros estáticos para rutas dinámicas
+export async function generateStaticParams() {
+    const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/data/Projects.json`
+    );
+    const projects: Projects[] = await response.json();
+
+    return projects.map((project) => ({
+        slug: project.name,
+    }));
 }
 
-const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
+// Página del proyecto
+const ProjectPage = async ({ params }: { params: { slug: string } }) => {
+    const { slug } = params;
+
+    // Obtener datos del proyecto en el servidor
+    const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/data/Projects.json`
+    );
+    const projects: Projects[] = await response.json();
+    const project = projects.find((project) => project.name === slug);
+
     if (!project) {
-        return (
-            <div className="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center">
-                <div className="text-center">
-                    <h1 className="text-4xl font-bold mb-4">
-                        Proyecto no encontrado
-                    </h1>
-                    <p className="mb-6">
-                        El proyecto que estás buscando no existe o fue
-                        eliminado.
-                    </p>
-                    <a
-                        href="/projects"
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition-all"
-                    >
-                        Volver a proyectos
-                    </a>
-                </div>
-            </div>
-        );
+        notFound(); // Devuelve un 404 si no encuentra el proyecto
     }
 
     return (
@@ -67,7 +64,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
                             </div>
                         )}
                         <h2 className="text-2xl font-bold mb-2 text-gray-100">
-                            Tecnologias
+                            Tecnologías
                         </h2>
                         <div className="flex flex-wrap gap-2 my-5">
                             {project.tecnologies.map((tecnology) => (
@@ -122,26 +119,3 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
 };
 
 export default ProjectPage;
-
-// getServerSideProps para cargar datos en cada solicitud
-export const getServerSideProps: GetServerSideProps = async (context) => {
-    const { slug } = context.params as { slug: string };
-
-    // Obtenemos los proyectos desde el JSON
-    const response = await fetch(
-        new URL("/data/Projects.json", process.env.NEXT_PUBLIC_BASE_URL)
-    );
-    const projects: Projects[] = await response.json();
-
-    // Buscamos el proyecto por su slug
-    const project = projects.find((project) => project.name === slug) || null;
-
-    return {
-        props: {
-            params: {
-                slug,
-            },
-            project,
-        },
-    };
-};
