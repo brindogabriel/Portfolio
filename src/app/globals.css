@@ -17,3 +17,7 @@ body {
     background: var(--background);
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.test-cursor {
+    cursor: url("/images/icons8-code-32.png"), auto;
+}

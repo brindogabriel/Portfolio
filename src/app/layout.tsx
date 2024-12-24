@@ -65,7 +65,7 @@ export default function RootLayout({
         <html lang="es" className="scroll-smooth">
             <body
                 suppressHydrationWarning={true}
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={`${geistSans.variable} ${geistMono.variable} antialiased test-cursor`}
             >
                 {children}
                 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js" />

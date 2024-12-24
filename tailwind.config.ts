@@ -9,7 +9,10 @@ export default {
     "./node_modules/flowbite/**/*.js",
   ],
   theme: {
-    extend: {
+      extend: {
+         cursor: {
+           'piola': 'url("images/icons8-code-50.png"), auto',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
