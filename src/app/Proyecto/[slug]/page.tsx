@@ -4,9 +4,9 @@ import GalleryWithLightbox from "./components/GalleryWithLightbox";
 import { SiGithub } from "react-icons/si";
 
 type ProjectPageProps = {
-    params: {
+    params: Awaited<{
         slug: string;
-    };
+    }>;
 };
 
 export async function generateStaticParams() {
