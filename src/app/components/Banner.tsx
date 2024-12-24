@@ -64,7 +64,7 @@ export default function Banner() {
                         Ver Proyectos
                     </a>
                     <a
-                        href="./doc/CV_GABRIEL_BRINDO.pdf"
+                        href="./doc/CV_BRINDO_GABRIEL.pdf"
                         className="bg-transparent inline-flex items-center me-2 mx-2 hover:bg-white/10 text-white font-semibold py-2 px-4 border border-white rounded"
                     >
                         <svg
