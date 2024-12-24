@@ -7,7 +7,6 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "preinstall": "rm -rf node_modules package-lock.json",
         "install": "npm install --legacy-peer-deps"
     },
     "dependencies": {
