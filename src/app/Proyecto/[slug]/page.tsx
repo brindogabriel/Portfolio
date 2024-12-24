@@ -14,7 +14,9 @@ export default async function Page({
     const { slug } = await params;
 
     // Obtén los proyectos desde un archivo JSON o API
-    const response = await fetch(`/data/Projects.json`);
+    const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL_PROD}/data/Projects.json`
+    );
     const projects: Projects[] = await response.json();
 
     // Buscamos el proyecto correspondiente al slug
