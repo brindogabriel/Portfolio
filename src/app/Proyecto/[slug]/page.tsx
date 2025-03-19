@@ -3,6 +3,7 @@
 import { notFound } from "next/navigation";
 import { Projects } from "@/app/types";
 import ProjectPage from "./ProjectPage";
+import projectsData from "../../../../public/data/Projects.json";
 
 export default async function Page({
     params,
@@ -12,11 +13,8 @@ export default async function Page({
     // Obtenemos el slug de los parámetros
     const { slug } = await params;
 
-    // Obtén los proyectos desde un archivo JSON o API
-    const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL_PROD}/data/Projects.json`
-    );
-    const projects: Projects[] = await response.json();
+    // Usamos directamente los datos importados del JSON
+    const projects: Projects[] = projectsData;
 
     // Buscamos el proyecto correspondiente al slug
     const project = projects.find((project) => project.name === slug);

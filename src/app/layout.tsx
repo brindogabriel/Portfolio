@@ -16,44 +16,77 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-    title: "Gabriel Brindo | Desarrollador Web",
+    title: "Gabriel Brindo | Desarrollador Web Full Stack | Argentina",
     description:
-        "¡Gabriel Brindo, desarrollador web argentino! Ofrezco creatividad y funcionalidad en proyectos web personalizados. Experto en HTML, CSS, JavaScript y frameworks modernos. ¡Contáctame para transformar tus ideas en realidad digital! 🚀",
+        "Desarrollador web argentino especializado en crear sitios web modernos y aplicaciones web personalizadas. Experto en React, Next.js, JavaScript, HTML y CSS. Soluciones digitales creativas y funcionales para empresas y particulares.",
     keywords:
-        "gabriel brindo, desarrollador web, portfolio, HTML, CSS, JavaScript, frameworks modernos, desarrollo web, proyectos web, Argentina",
+        "gabriel brindo, desarrollador web, portfolio, desarrollador full stack, React, Next.js, JavaScript, HTML, CSS, desarrollo web, proyectos web, Argentina, diseño web responsivo, aplicaciones web",
     robots: "index, follow",
+    alternates: {
+        canonical: "https://www.gabrielbrindo.com.ar/",
+        languages: {
+            "es-AR": "https://www.gabrielbrindo.com.ar/",
+        },
+    },
+    authors: [{ name: "Gabriel Brindo" }],
+    category: "technology",
+    creator: "Gabriel Brindo",
+    publisher: "Gabriel Brindo",
+    metadataBase: new URL("https://www.gabrielbrindo.com.ar"),
 
     openGraph: {
         locale: "es_AR",
-        title: "Gabriel Brindo | Desarrollador Web",
+        title: "Gabriel Brindo | Desarrollador Web Full Stack | Argentina",
         description:
-            "¡Gabriel Brindo, desarrollador web argentino! Ofrezco creatividad y funcionalidad en proyectos web personalizados. Experto en HTML, CSS, JavaScript y frameworks modernos. ¡Contáctame para transformar tus ideas en realidad digital! 🚀",
+            "Desarrollador web argentino especializado en crear sitios web modernos y aplicaciones web personalizadas. Experto en React, Next.js, JavaScript, HTML y CSS. Soluciones digitales creativas y funcionales.",
         url: "https://www.gabrielbrindo.com.ar/",
-        siteName: "Gabriel Brindo",
+        siteName: "Gabriel Brindo - Portfolio Profesional",
         images: [
             {
-                url: " https://www.gabrielbrindo.com.ar/favicon.ico",
+                url: "https://www.gabrielbrindo.com.ar/favicon.ico",
                 width: 1200,
                 height: 630,
-                alt: "Logo",
+                alt: "Gabriel Brindo - Desarrollador Web",
+                type: "image/jpeg",
             },
         ],
-
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Gabriel Brindo | Desarrollador Web",
+        title: "Gabriel Brindo | Desarrollador Web Full Stack | Argentina",
         description:
-            "¡Gabriel Brindo, desarrollador web argentino! Ofrezco creatividad y funcionalidad en proyectos web personalizados. Experto en HTML, CSS, JavaScript y frameworks modernos. ¡Contáctame para transformar tus ideas en realidad digital! 🚀",
-        images: ["https://www.gabrielbrindo.com.ar/images/favicon.ico"],
+            "Desarrollador web argentino especializado en crear sitios web modernos y aplicaciones web personalizadas. Experto en React, Next.js, JavaScript, HTML y CSS.",
+        images: ["https://www.gabrielbrindo.com.ar/favicon.ico"],
+        creator: "@gabrielbrindo",
+        site: "@gabrielbrindo",
     },
     icons: {
-        icon: "/images/favicon.ico",
-        shortcut: "/images/favicon.ico",
-        apple: "/images/favicon.ico",
+        icon: [{ url: "/favicon.ico" }],
+        shortcut: "/favicon.ico",
+        apple: [
+            { url: "/favicon.ico" },
+            {
+                url: "/favicon.ico",
+                sizes: "180x180",
+                type: "image/png",
+            },
+        ],
+        other: [
+            {
+                rel: "apple-touch-icon-precomposed",
+                url: "/favicon.ico",
+            },
+        ],
     },
-    applicationName: "Gabriel Brindo",
+
+    formatDetection: {
+        telephone: true,
+        date: false,
+        address: false,
+        email: true,
+        url: false,
+    },
 };
 
 export default function RootLayout({
@@ -62,9 +95,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="es" className="scroll-smooth">
+        <html lang="es" className="scroll-smooth" suppressHydrationWarning>
             <body
-                suppressHydrationWarning={true}
+                suppressHydrationWarning
                 className={`${geistSans.variable} ${geistMono.variable} antialiased test-cursor`}
             >
                 {children}
