@@ -18,6 +18,127 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.test-cursor {
-    cursor: url("/images/icons8-code-32.png"), auto;
+/* Estilos específicos para el componente not-found */
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+/* Estilos para las teclas mecánicas */
+.key-404 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    background-color: #dc2626; /* red-600 */
+    border-radius: 0.75rem;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2),
+        0 -1px 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #9f1239,
+        /* red-800 para la base */ 0 8px 0 1px rgba(0, 0, 0, 0.4),
+        0 8px 8px 1px rgba(0, 0, 0, 0.5);
+    transition: all 0.1s ease;
+    transform-style: preserve-3d;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+    .key-404 {
+        width: 8rem;
+        height: 8rem;
+        font-size: 2.5rem;
+    }
+}
+
+.key-404::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0.75rem;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.1) 40%,
+        rgba(0, 0, 0, 0.1) 60%,
+        rgba(0, 0, 0, 0.2) 100%
+    );
+    pointer-events: none;
+}
+
+.key-404.pressed {
+    transform: translateY(5px);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2),
+        0 -1px 0 2px rgba(255, 255, 255, 0.15) inset, 0 3px 0 0 #9f1239,
+        /* red-800 para la base */ 0 3px 0 1px rgba(0, 0, 0, 0.4),
+        0 3px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+.key-404-glow {
+    position: absolute;
+    inset: 0;
+    background-color: #ef4444; /* red-500 */
+    border-radius: 0.75rem;
+    filter: blur(1.5rem);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.key-404-glow.active {
+    opacity: 0.7;
+}
+
+.key-404-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.not-found-text {
+    transition: opacity 0.5s ease;
+}
+
+.not-found-text.hidden {
+    opacity: 0;
+}
+
+.not-found-text.visible {
+    opacity: 1;
+}
+
+.not-found-description {
+    color: #9ca3af; /* gray-400 */
+    transition: opacity 0.5s ease;
+    transition-delay: 0.3s;
+}
+
+.not-found-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #b91c1c; /* red-700 */
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.not-found-button:hover {
+    background-color: #dc2626; /* red-600 */
 }

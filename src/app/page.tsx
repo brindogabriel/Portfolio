@@ -5,8 +5,6 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 
 export default function Home() {
-   
-
     return (
         <>
             <div>
@@ -14,7 +12,6 @@ export default function Home() {
                 <Banner />
                 <Projects />
                 <ContactForm />
-          
             </div>
         </>
     );

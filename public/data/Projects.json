@@ -75,50 +75,16 @@
         "liveLink": "https://www.copypast.com.ar"
     },
     {
-        "id": 3,
-        "name": "SillonesArmoniayRelax",
-        "images": [
-            {
-                "src": "/images/sillones/sillones-armonia-y-relax.vercel.app_.png",
-                "caption": "Primer imagen"
-            },
-            {
-                "src": "/images/sillones/sillones-armonia-y-relax.vercel.app_product.png",
-                "caption": "Primer imagen"
-            },
-            {
-                "src": "/images/sillones/sillones-armonia-y-relax.vercel.app_contacto.png",
-                "caption": "Primer imagen"
-            },
-            {
-                "src": "/images/sillones/sillones-armonia-y-relax.vercel.app_carrito.png",
-                "caption": "Primer imagen"
-            }
-        ],
-        "description": {
-            "presentacion": "Ecommerce real de sillones",
-            "problema": "El emprendimiento no contaba con una presencia online, y no podía mostrar sus productos de manera online.",
-            "solucion": "Desarrollar un e-commerce, que permita mostrar los productos, y que permita la compra de los mismos de manera online."
-        },
-        "tecnologies": [
-            "React",
-            "Node.js",
-            "Supabase",
-            "Nextjs",
-            "TailwindCSS"
-        ]
-    },
-    {
         "id": 4,
         "name": "WhaChatGenLink",
         "images": [
             {
                 "src": "/images/WhaChatGenLink/light.png",
-                "caption": "Primer imagen"
+                "caption": "Tema claro"
             },
             {
                 "src": "/images/WhaChatGenLink/dark.png",
-                "caption": "Primer imagen"
+                "caption": "Tema oscuro"
             }
         ],
         "description": {
