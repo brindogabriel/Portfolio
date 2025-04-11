@@ -28,6 +28,32 @@ body {
     background-color: black;
     color: white;
     padding: 1rem;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.not-found-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.keys-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+    .keys-container {
+        gap: 1rem;
+    }
 }
 
 /* Estilos para las teclas mecánicas */
@@ -36,26 +62,43 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     background-color: #dc2626; /* red-600 */
     border-radius: 0.75rem;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2),
         0 -1px 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #9f1239,
         /* red-800 para la base */ 0 8px 0 1px rgba(0, 0, 0, 0.4),
         0 8px 8px 1px rgba(0, 0, 0, 0.5);
-    transition: all 0.1s ease;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
     transform-style: preserve-3d;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: white;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+}
+
+@media (min-width: 400px) {
+    .key-404 {
+        width: 5.5rem;
+        height: 5.5rem;
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .key-404 {
+        width: 6.5rem;
+        height: 6.5rem;
+        font-size: 2.25rem;
+    }
 }
 
 @media (min-width: 768px) {
     .key-404 {
-        width: 8rem;
-        height: 8rem;
+        width: 7.5rem;
+        height: 7.5rem;
         font-size: 2.5rem;
     }
 }
@@ -88,9 +131,9 @@ body {
 
 .key-404-glow {
     position: absolute;
-    inset: 0;
+    inset: -10px;
     background-color: #ef4444; /* red-500 */
-    border-radius: 0.75rem;
+    border-radius: 1.5rem;
     filter: blur(1.5rem);
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -113,6 +156,10 @@ body {
 
 .not-found-text {
     transition: opacity 0.5s ease;
+    text-align: center;
+    width: 100%;
+    max-width: 28rem;
+    margin: 0 auto;
 }
 
 .not-found-text.hidden {
@@ -123,10 +170,37 @@ body {
     opacity: 1;
 }
 
+.not-found-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 640px) {
+    .not-found-heading {
+        font-size: 1.875rem;
+    }
+}
+
 .not-found-description {
     color: #9ca3af; /* gray-400 */
     transition: opacity 0.5s ease;
     transition-delay: 0.3s;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+    .not-found-description {
+        font-size: 1rem;
+    }
+}
+
+.not-found-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .not-found-button {
@@ -137,6 +211,13 @@ body {
     background-color: #b91c1c; /* red-700 */
     border-radius: 0.5rem;
     transition: background-color 0.3s ease;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+    .not-found-button {
+        font-size: 1rem;
+    }
 }
 
 .not-found-button:hover {

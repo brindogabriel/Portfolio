@@ -8,40 +8,52 @@ export default function NotFound() {
     const [animationComplete, setAnimationComplete] = useState(false);
 
     useEffect(() => {
+        let mounted = true;
+
         // Secuencia de animación para presionar las teclas una por una en bucle infinito
         const animateKeys = async () => {
-            while (true) {
+            // Pequeña pausa inicial para evitar saltos
+            await new Promise((resolve) => setTimeout(resolve, 300));
+
+            if (!mounted) return;
+            setAnimationComplete(true); // Mostrar el texto después de la pausa inicial
+
+            while (mounted) {
                 // Presionar la primera tecla (4)
                 setActiveKey(0);
                 await new Promise((resolve) => setTimeout(resolve, 600));
+                if (!mounted) return;
 
                 // Presionar la segunda tecla (0)
                 setActiveKey(1);
                 await new Promise((resolve) => setTimeout(resolve, 600));
+                if (!mounted) return;
 
                 // Presionar la tercera tecla (0)
                 setActiveKey(2);
                 await new Promise((resolve) => setTimeout(resolve, 600));
+                if (!mounted) return;
 
                 // Pausa antes de reiniciar la secuencia
                 setActiveKey(null);
                 await new Promise((resolve) => setTimeout(resolve, 800));
+                if (!mounted) return;
             }
         };
 
-        // Iniciar la animación después de un breve retraso
-        const timer = setTimeout(() => {
-            animateKeys();
-            setAnimationComplete(true); // Mostrar el texto inmediatamente
-        }, 1000);
+        // Iniciar la animación
+        animateKeys();
 
-        return () => clearTimeout(timer);
+        // Limpieza al desmontar
+        return () => {
+            mounted = false;
+        };
     }, []);
 
     return (
         <div className="not-found-container">
-            <div className="mb-8">
-                <div className="flex gap-4 mb-12">
+            <div className="not-found-content">
+                <div className="keys-container">
                     {["4", "0", "4"].map((digit, index) => (
                         <div
                             key={index}
@@ -62,31 +74,19 @@ export default function NotFound() {
                     ))}
                 </div>
 
-                <h2
-                    className={`not-found-text text-2xl md:text-3xl text-center mb-4 ${
-                        animationComplete ? "visible" : "hidden"
-                    }`}
-                >
-                    Página no encontrada
-                </h2>
+                <div className={`not-found-text`}>
+                    <h2 className="not-found-heading">Página no encontrada</h2>
 
-                <p
-                    className={`not-found-description text-center max-w-md mx-auto mb-8 ${
-                        animationComplete ? "visible" : "hidden"
-                    }`}
-                >
-                    Lo sentimos, la página que estás buscando no existe o ha
-                    sido movida.
-                </p>
+                    <p className="not-found-description">
+                        Lo sentimos, la página que estás buscando no existe o ha
+                        sido movida.
+                    </p>
 
-                <div
-                    className={`flex justify-center not-found-text ${
-                        animationComplete ? "visible" : "hidden"
-                    }`}
-                >
-                    <Link href="/" className="not-found-button">
-                        Volver al inicio
-                    </Link>
+                    <div className="not-found-button-container">
+                        <Link href="/" className="not-found-button">
+                            Volver al inicio
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
