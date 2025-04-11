@@ -5,7 +5,6 @@ import Link from "next/link";
 
 export default function NotFound() {
     const [activeKey, setActiveKey] = useState<number | null>(null);
-    const [isTextVisible, setIsTextVisible] = useState(false);
 
     useEffect(() => {
         let mounted = true;
@@ -16,7 +15,6 @@ export default function NotFound() {
             await new Promise((resolve) => setTimeout(resolve, 300));
 
             if (!mounted) return;
-            setIsTextVisible(true); // Mostrar el texto después de la pausa inicial
 
             while (mounted) {
                 // Presionar la primera tecla (4)
@@ -74,7 +72,7 @@ export default function NotFound() {
                     ))}
                 </div>
 
-                <div className={`not-found-text`}>
+                <div className={`not-found-text `}>
                     <h2 className="not-found-heading">Página no encontrada</h2>
 
                     <p className="not-found-description">
