@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function NotFound() {
     const [activeKey, setActiveKey] = useState<number | null>(null);
-    const [animationComplete, setAnimationComplete] = useState(false);
+    const [isTextVisible, setIsTextVisible] = useState(false);
 
     useEffect(() => {
         let mounted = true;
@@ -16,7 +16,7 @@ export default function NotFound() {
             await new Promise((resolve) => setTimeout(resolve, 300));
 
             if (!mounted) return;
-            setAnimationComplete(true); // Mostrar el texto después de la pausa inicial
+            setIsTextVisible(true); // Mostrar el texto después de la pausa inicial
 
             while (mounted) {
                 // Presionar la primera tecla (4)
