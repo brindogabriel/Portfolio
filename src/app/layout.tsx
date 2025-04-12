@@ -5,7 +5,7 @@ import "./globals.css";
 
 const medievalSharp = MedievalSharp({
     subsets: ["latin"],
-    weight: "400", // o el peso que necesites
+    weight: "400", // Cambia el peso según tus necesidades
     display: "swap",
 });
 export const metadata: Metadata = {
@@ -122,17 +122,6 @@ export default function RootLayout({
     return (
         <html lang="es" className="scroll-smooth" suppressHydrationWarning>
             <head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link
-                    rel="preconnect"
-                    href="https://fonts.gstatic.com"
-                    crossOrigin="anonymous"
-                />
-                <link
-                    rel="stylesheet"
-                    href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
-                />
-
                 <meta name="theme-color" content="#1a1410" />
             </head>
             <body
