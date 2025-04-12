@@ -675,17 +675,20 @@ export default function Home() {
                                 <div className="flex gap-4">
                                     <Link
                                         href="https://github.com/brindogabriel"
+                                        target="_blank"
                                         className="w-10 h-10 rounded-full bg-[#c19a49]/20 flex items-center justify-center hover:bg-[#c19a49]/40 transition-colors"
                                     >
                                         <Github className="h-5 w-5 text-[#c19a49]" />
                                     </Link>
                                     <Link
+                                        target="_blank"
                                         href="https://www.linkedin.com/in/gabrielsebastianbrindo"
                                         className="w-10 h-10 rounded-full bg-[#c19a49]/20 flex items-center justify-center hover:bg-[#c19a49]/40 transition-colors"
                                     >
                                         <Linkedin className="h-5 w-5 text-[#c19a49]" />
                                     </Link>
                                     <Link
+                                        target="_blank"
                                         href="mailto:gabrielbrindo18@gmail.com?subject=Propuesta de trabajo"
                                         className="w-10 h-10 rounded-full bg-[#c19a49]/20 flex items-center justify-center hover:bg-[#c19a49]/40 transition-colors"
                                     >
