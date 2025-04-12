@@ -1,130 +1,155 @@
-/* eslint-disable @next/next/no-img-element */
-import React from "react";
-import { Mail, Send } from "lucide-react";
-import { useForm, ValidationError } from "@formspree/react";
+"use client";
+import { useForm } from "@formspree/react";
+import { Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-export default function ContactForm() {
-    const [state, handleSubmit] = useForm("xgejjgra");
+interface ValidationErrorProps {
+    prefix: string;
+    field: string;
+    errors: any;
+    className?: string;
+}
+
+// Componente de error de validación
+const ValidationError = ({
+    prefix,
+    field,
+    errors,
+    className,
+}: ValidationErrorProps) => {
+    if (!errors || !errors[field]) return null;
 
     return (
-        <div
-            className="min-h-screen bg-gray-900 text-gray-100 py-6 px-4 sm:px-6 lg:px-8 overflow-x-hidden"
-            id="contacto"
-        >
-            <div className="max-w-full sm:max-w-lg mx-auto p-4 sm:p-6 lg:p-8 dark:bg-gray-800 rounded-xl shadow-lg transition-colors duration-200">
-                <div className="flex flex-col items-center justify-center mb-8">
-                    <div className="flex items-center mb-4">
-                        <Mail className="w-8 h-8 text-blue-600 dark:text-blue-400 mr-2" />
-                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
-                            Contactame
-                        </h2>
-                    </div>
-                    <ul className="flex flex-wrap justify-center gap-4">
-                        <li>
-                            <a
-                                href="https://www.linkedin.com/in/gabrielsebastianbrindo"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="transition-transform transform hover:scale-105"
-                            >
-                                <img
-                                    src="https://img.shields.io/badge/LinkedIn-GABRIELSEBASTIANBRINDO-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
-                                    alt="badge linkedin"
-                                />
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/brindogabriel"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="transition-transform transform hover:scale-105"
-                            >
-                                <img
-                                    src="https://img.shields.io/badge/GitHub-BRINDOGABRIEL-100000?style=for-the-badge&logo=GitHub&logoColor=white"
-                                    alt="badge GitHub"
-                                />
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+        <div className={className}>
+            {errors[field].map((error: string) => (
+                <p key={error}>
+                    {prefix}: {error}
+                </p>
+            ))}
+        </div>
+    );
+};
 
-                {state.succeeded ? (
-                    <div className="mb-4 p-3 rounded-lg bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100">
-                        ¡Mensaje enviado correctamente! Te responderé pronto.
+export default function ContactForm() {
+    const [state, handleSubmit] = useForm("xgejjgra"); // Reemplaza con tu ID de formspree
+
+    return (
+        <div className="bg-[#1a1410] border-[#8c6d4b] rounded-md overflow-hidden">
+            {state.succeeded ? (
+                <div className="p-6 border-2 border-[#c19a49] bg-[#2a1e18] text-[#e8d0b0] rounded-md">
+                    <div className="flex items-center gap-3 mb-3">
+                        <div className="w-8 h-8 rounded-full bg-[#c19a49]/20 flex items-center justify-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5 text-[#c19a49]"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                            >
+                                <path
+                                    fillRule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clipRule="evenodd"
+                                />
+                            </svg>
+                        </div>
+                        <h3 className="text-xl font-bold text-[#c19a49]">
+                            ¡Mensaje Enviado!
+                        </h3>
                     </div>
-                ) : (
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <p className="text-[#e8d0b0]/80">
+                        Tu mensaje ha sido enviado correctamente. Como un veloz
+                        jinete mongol, te responderé lo antes posible.
+                    </p>
+                </div>
+            ) : (
+                <form onSubmit={handleSubmit} className="space-y-4 p-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                            <label
+                                htmlFor="nombre"
+                                className="text-sm font-medium text-[#e8d0b0]"
+                            >
+                                Nombre
+                            </label>
+                            <input
+                                id="nombre"
+                                name="nombre"
+                                required
+                                className="w-full px-3 py-2 bg-[#3d2e24] border border-[#8c6d4b] rounded-md focus:outline-none focus:ring-2 focus:ring-[#c19a49] text-[#e8d0b0]"
+                                placeholder="Tu nombre"
+                            />
+                        </div>
                         <div className="space-y-2">
                             <label
                                 htmlFor="email"
-                                className="block text-sm sm:text-base font-medium text-gray-900 dark:text-gray-200"
+                                className="text-sm font-medium text-[#e8d0b0]"
                             >
-                                Tu Email
+                                Email
                             </label>
                             <input
-                                type="email"
                                 id="email"
                                 name="email"
+                                type="email"
                                 required
-                                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 
-                                    bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                                    focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 
-                                    focus:border-transparent transition-colors duration-200"
-                                placeholder="name@example.com"
+                                className="w-full px-3 py-2 bg-[#3d2e24] border border-[#8c6d4b] rounded-md focus:outline-none focus:ring-2 focus:ring-[#c19a49] text-[#e8d0b0]"
+                                placeholder="tu@email.com"
                             />
                             <ValidationError
                                 prefix="Email"
                                 field="email"
                                 errors={state.errors}
-                                className="text-red-500 text-sm mt-1"
+                                className="text-[#e05858] text-sm mt-1"
                             />
                         </div>
-
-                        <div className="space-y-2">
-                            <label
-                                htmlFor="message"
-                                className="block text-sm sm:text-base font-medium text-gray-900 dark:text-gray-200"
-                            >
-                                Tu mensaje
-                            </label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                required
-                                rows={5}
-                                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 
-                                    bg-white dark:bg-gray-700 text-gray-900 dark:text-white
-                                    focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 
-                                    focus:border-transparent transition-colors duration-200 resize-none field-sizing-content max-h-[5lh]"
-                                placeholder="Escribí tu mensaje acá..."
-                            ></textarea>
-                            <ValidationError
-                                prefix="Mensaje"
-                                field="message"
-                                errors={state.errors}
-                                className="text-red-500 text-sm mt-1"
-                            />
-                        </div>
-                        <button
-                            type="submit"
-                            disabled={state.submitting}
-                            className="w-full flex items-center justify-center space-x-2 px-6 py-3 
-                                bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 
-                                text-white font-medium rounded-lg transition-colors duration-200
-                                focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800
-                                disabled:opacity-70 disabled:cursor-not-allowed"
+                    </div>
+                    <div className="space-y-2">
+                        <label
+                            htmlFor="asunto"
+                            className="text-sm font-medium text-[#e8d0b0]"
                         >
-                            <span>
-                                {state.submitting
-                                    ? "Enviando..."
-                                    : "Enviar Email"}
-                            </span>
-                            <Send className="w-5 h-5 ml-2" />
-                        </button>
-                    </form>
-                )}
-            </div>
+                            Asunto
+                        </label>
+                        <input
+                            id="asunto"
+                            name="asunto"
+                            className="disabled w-full px-3 py-2 bg-[#3d2e24] border border-[#8c6d4b] rounded-md focus:outline-none focus:ring-2 focus:ring-[#c19a49] text-[#e8d0b0]"
+                            placeholder="Asunto del mensaje"
+                            value="Propuesta de trabajo"
+                            readOnly
+                        />
+                    </div>
+                    <div className="space-y-2">
+                        <label
+                            htmlFor="message"
+                            className="text-sm font-medium text-[#e8d0b0]"
+                        >
+                            Mensaje
+                        </label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows={5}
+                            required
+                            className="w-full px-3 py-2 bg-[#3d2e24] border border-[#8c6d4b] rounded-md focus:outline-none focus:ring-2 focus:ring-[#c19a49] text-[#e8d0b0] resize-none"
+                            placeholder="Escribe tu mensaje aquí..."
+                        ></textarea>
+                        <ValidationError
+                            prefix="Mensaje"
+                            field="message"
+                            errors={state.errors}
+                            className="text-[#e05858] text-sm mt-1"
+                        />
+                    </div>
+                    <Button
+                        type="submit"
+                        disabled={state.submitting}
+                        className="w-full bg-[#c19a49] hover:bg-[#a17a29] text-[#1a1410] font-bold disabled:opacity-70 disabled:cursor-not-allowed"
+                    >
+                        {state.submitting ? "Enviando..." : "Enviar Mensaje"}
+                        <Send className="ml-2 h-4 w-4" />
+                    </Button>
+                </form>
+            )}
         </div>
     );
 }
