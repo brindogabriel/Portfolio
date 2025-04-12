@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         siteName: "Gabriel Brindo - Portfolio Profesional",
         images: [
             {
-                url: "https://www.gabrielbrindo.com.ar/og-image.jpg", // Cambiar a una imagen OG dedicada, no el favicon
+                url: "https://www.gabrielbrindo.com.ar/images/favicon.png", // Cambiar a una imagen OG dedicada, no el favicon
                 width: 1200,
                 height: 630,
                 alt: "Gabriel Brindo - Desarrollador Web Full Stack",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         title: "Gabriel Brindo | Desarrollador Web Full Stack | Argentina",
         description:
             "Desarrollador web argentino especializado en crear sitios web modernos y aplicaciones web personalizadas. Experto en React, Next.js, JavaScript, HTML y CSS.",
-        images: ["https://www.gabrielbrindo.com.ar/og-image.jpg"], // Usar la misma imagen OG
+        images: ["https://www.gabrielbrindo.com.ar/images/favicon.png"], // Usar la misma imagen OG
         creator: "@gabrielbrindo",
         site: "@gabrielbrindo",
     },

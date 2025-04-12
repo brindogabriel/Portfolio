@@ -446,7 +446,7 @@ export default function Home() {
                         </Card>
 
                         <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
-                            <div className="h-48 overflow-hidden">
+                            <div className="h-48">
                                 <Image
                                     src="/images/fomentarimg/iniciofomentar.png"
                                     width={800}
@@ -473,6 +473,7 @@ export default function Home() {
                                     <Link
                                         className="underline text-[#c19a49] hover:text-[#e8d0b0]"
                                         target="_blank"
+                                        title="LinkedIn de Cristian Villavicencio"
                                         href="https://www.linkedin.com/in/cristian-villavicencio-19572a177"
                                     >
                                         Cristian Villavicencio
