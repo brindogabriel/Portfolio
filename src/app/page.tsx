@@ -5,7 +5,6 @@ import {
     Github,
     Linkedin,
     Mail,
-    FileText,
     ArrowRight,
     Globe,
     Code,
