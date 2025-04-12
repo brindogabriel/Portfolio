@@ -3,33 +3,6 @@ import { useForm } from "@formspree/react";
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-interface ValidationErrorProps {
-    prefix: string;
-    field: string;
-    errors: any;
-    className?: string;
-}
-
-// Componente de error de validación
-const ValidationError = ({
-    prefix,
-    field,
-    errors,
-    className,
-}: ValidationErrorProps) => {
-    if (!errors || !errors[field]) return null;
-
-    return (
-        <div className={className}>
-            {errors[field].map((error: string) => (
-                <p key={error}>
-                    {prefix}: {error}
-                </p>
-            ))}
-        </div>
-    );
-};
-
 export default function ContactForm() {
     const [state, handleSubmit] = useForm("xgejjgra"); // Reemplaza con tu ID de formspree
 
@@ -94,12 +67,6 @@ export default function ContactForm() {
                                 className="w-full px-3 py-2 bg-[#3d2e24] border border-[#8c6d4b] rounded-md focus:outline-none focus:ring-2 focus:ring-[#c19a49] text-[#e8d0b0]"
                                 placeholder="tu@email.com"
                             />
-                            <ValidationError
-                                prefix="Email"
-                                field="email"
-                                errors={state.errors}
-                                className="text-[#e05858] text-sm mt-1"
-                            />
                         </div>
                     </div>
                     <div className="space-y-2">
@@ -133,12 +100,6 @@ export default function ContactForm() {
                             className="w-full px-3 py-2 bg-[#3d2e24] border border-[#8c6d4b] rounded-md focus:outline-none focus:ring-2 focus:ring-[#c19a49] text-[#e8d0b0] resize-none"
                             placeholder="Escribe tu mensaje aquí..."
                         ></textarea>
-                        <ValidationError
-                            prefix="Mensaje"
-                            field="message"
-                            errors={state.errors}
-                            className="text-[#e05858] text-sm mt-1"
-                        />
                     </div>
                     <Button
                         type="submit"

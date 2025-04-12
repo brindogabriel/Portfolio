@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import Link from "next/link";
 import {
     Github,
@@ -554,20 +555,6 @@ export default function Home() {
                             <div className="space-y-4">
                                 <div className="flex items-center gap-3">
                                     <div className="w-12 h-12 rounded-full bg-[#c19a49]/20 flex items-center justify-center">
-                                        <FileText className="h-6 w-6 text-[#c19a49]" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-[#c19a49]">
-                                            Educación
-                                        </h3>
-                                        <p className="text-[#e8d0b0]/80">
-                                            Ingeniería Informática, Universidad
-                                            de Tecnología
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <div className="w-12 h-12 rounded-full bg-[#c19a49]/20 flex items-center justify-center">
                                         <Globe className="h-6 w-6 text-[#c19a49]" />
                                     </div>
                                     <div>
@@ -575,7 +562,7 @@ export default function Home() {
                                             Idiomas
                                         </h3>
                                         <p className="text-[#e8d0b0]/80">
-                                            Español (Nativo), Inglés (Avanzado)
+                                            Español (Nativo), Inglés (Básico)
                                         </p>
                                     </div>
                                 </div>

@@ -1,8 +1,13 @@
 /* eslint-disable @next/next/no-sync-scripts */
-
+import { MedievalSharp } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 
+const medievalSharp = MedievalSharp({
+    subsets: ["latin"],
+    weight: "400", // o el peso que necesites
+    display: "swap",
+});
 export const metadata: Metadata = {
     title: "Gabriel Brindo | Desarrollador Web Full Stack | Argentina",
     description:
@@ -132,7 +137,7 @@ export default function RootLayout({
             </head>
             <body
                 suppressHydrationWarning
-                className={` antialiased test-cursor scroll-smooth`}
+                className={`${medievalSharp.className} antialiased test-cursor scroll-smooth`}
             >
                 {children}
                 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js" />
