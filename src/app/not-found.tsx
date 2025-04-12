@@ -13,7 +13,7 @@ export default function NotFound() {
             <div className="max-w-3xl w-full text-center relative z-10">
                 <div className="relative w-64 h-64 mx-auto mb-8">
                     <Image
-                        src="/images/mangudai_stride.webp"
+                        src="/images/Mangudai_stride.webp"
                         width={400}
                         height={400}
                         alt="Guerrero Mongol"
