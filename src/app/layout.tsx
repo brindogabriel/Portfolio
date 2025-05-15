@@ -68,31 +68,13 @@ export const metadata: Metadata = {
     icons: {
         icon: [{ url: "/favicon.ico" }],
         shortcut: "/favicon.ico",
-        apple: [
-            { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
-        ],
+        apple: "/favicon.ico",
         other: [
             {
-                rel: "apple-touch-icon-precomposed",
-                url: "/apple-touch-icon-precomposed.png",
-            },
-            {
-                rel: "mask-icon",
-                url: "/safari-pinned-tab.svg",
-                color: "#c19a49", // Color que coincide con tu tema
+                rel: "apple-touch-icon",
+                url: "/favicon.ico",
             },
         ],
-    },
-
-    verification: {
-        // Añadir cuando tengas estas verificaciones
-        // google: "tu-código-de-verificación",
-        // yandex: "tu-código-de-verificación",
-    },
-    appleWebApp: {
-        capable: true,
-        title: "Gabriel Brindo",
-        statusBarStyle: "black-translucent",
     },
     formatDetection: {
         telephone: true,
