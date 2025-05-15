@@ -17,6 +17,7 @@ export default function NotFound() {
                         width={400}
                         height={400}
                         alt="Guerrero Mongol"
+                        unoptimized
                         className="object-contain"
                     />
                     <div className="absolute -bottom-4 -right-4 bg-[#c19a49] text-[#1a1410] text-5xl md:text-6xl font-bold px-4 py-1 md:px-6 md:py-2 transform rotate-6 border-4 border-[#8c6d4b]">
