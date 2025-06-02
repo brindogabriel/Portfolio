@@ -1,19 +1,20 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import { MedievalSharp } from "next/font/google";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const medievalSharp = MedievalSharp({
     subsets: ["latin"],
-    weight: "400", // Cambia el peso según tus necesidades
+    weight: "400",
     display: "swap",
 });
+
 export const metadata: Metadata = {
     title: "Gabriel Brindo | Desarrollador Web Full Stack | Argentina",
     description:
-        "Desarrollador web argentino especializado en crear sitios web modernos y aplicaciones web personalizadas. Experto en React, Next.js, JavaScript, HTML y CSS. Soluciones digitales creativas y funcionales para empresas y particulares.",
+        "Soy Gabriel Brindo, desarrollador web full stack argentino. Creo sitios y aplicaciones modernas con React y Next.js. Tu próxima solución digital empieza aquí.",
     keywords:
-        "gabriel brindo, desarrollador web, portfolio, desarrollador full stack, React, Next.js, JavaScript, HTML, CSS, desarrollo web, proyectos web, Argentina, diseño web responsivo, aplicaciones web",
+        "Gabriel Brindo, desarrollador web, portfolio, full stack, React, Next.js, JavaScript, HTML, CSS, desarrollo web, proyectos, Argentina, diseño web responsivo, apps web",
     robots: {
         index: true,
         follow: true,
@@ -37,17 +38,16 @@ export const metadata: Metadata = {
     creator: "Gabriel Brindo",
     publisher: "Gabriel Brindo",
     metadataBase: new URL("https://www.gabrielbrindo.com.ar"),
-
     openGraph: {
         locale: "es_AR",
         title: "Gabriel Brindo | Desarrollador Web Full Stack | Argentina",
         description:
-            "Desarrollador web argentino especializado en crear sitios web modernos y aplicaciones web personalizadas. Experto en React, Next.js, JavaScript, HTML y CSS.",
+            "Desarrollador web argentino especializado en sitios modernos y aplicaciones web personalizadas. Experto en React, Next.js, JavaScript, HTML y CSS.",
         url: "https://www.gabrielbrindo.com.ar/",
         siteName: "Gabriel Brindo - Portfolio Profesional",
         images: [
             {
-                url: "https://www.gabrielbrindo.com.ar/images/favicon.png", // Cambiar a una imagen OG dedicada, no el favicon
+                url: "https://www.gabrielbrindo.com.ar/images/og-image.jpg", // Recomendado: usá una imagen OG dedicada y atractiva
                 width: 1200,
                 height: 630,
                 alt: "Gabriel Brindo - Desarrollador Web Full Stack",
@@ -60,8 +60,8 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Gabriel Brindo | Desarrollador Web Full Stack | Argentina",
         description:
-            "Desarrollador web argentino especializado en crear sitios web modernos y aplicaciones web personalizadas. Experto en React, Next.js, JavaScript, HTML y CSS.",
-        images: ["https://www.gabrielbrindo.com.ar/images/favicon.png"], // Usar la misma imagen OG
+            "Desarrollador web argentino especializado en crear sitios web modernos y apps personalizadas con React y Next.js.",
+        images: ["https://www.gabrielbrindo.com.ar/images/og-image.jpg"],
         creator: "@gabrielbrindo",
         site: "@gabrielbrindo",
     },
@@ -85,10 +85,8 @@ export const metadata: Metadata = {
     },
 };
 
-import type { Viewport } from "next";
-
 export const viewport: Viewport = {
-    themeColor: "black",
+    themeColor: "#1a1410", // coherente con el meta tag
 };
 
 export default function RootLayout({
@@ -106,7 +104,7 @@ export default function RootLayout({
                 className={`${medievalSharp.className} antialiased test-cursor scroll-smooth`}
             >
                 {children}
-                <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js" />
+                <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js" />
             </body>
         </html>
     );
