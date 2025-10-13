@@ -40,14 +40,29 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
 }
-
-/* Opciones para cursor personalizado - comentadas para que el usuario decida */
-/*
+/* Cursor personalizado */
 body {
-  cursor: url('/cursor-normal.png'), auto;
+    cursor: url("/cursores/Cursor.cur"), auto;
 }
 
-a, button {
-  cursor: url('/cursor-pointer.png'), pointer;
+a,
+button {
+    cursor: url("/cursores/Hand.cur"), pointer;
 }
-*/
+
+/* Estilos para cursor de espera */
+*[disabled] {
+    cursor: url("/cursores/Hourglass.cur"), wait !important;
+}
+
+.cursor-submitting,
+.cursor-submitting *,
+.cursor-submitting button[disabled] {
+    cursor: url("/cursores/Hourglass.cur"), wait !important;
+}
+
+/* Prevenir el cursor de espera predeterminado */
+*[disabled],
+.cursor-submitting *[disabled] {
+    cursor: url("/cursores/Hourglass.cur"), wait !important;
+}

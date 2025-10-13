@@ -1,0 +1,42 @@
+﻿[Arrow]
+Path=Cursor.cur
+
+[AppStarting]
+Path=Wait.cur
+
+[Help]
+Path=Help.cur
+
+[IBeam]
+Path=Flag.cur
+
+[SizeWE]
+Path=Bridge Horizontal.cur
+
+[SizeNS]
+Path=Bridge Vertical.cur
+
+[SizeAll]
+Path=Bridge move.cur
+
+[SizeNWSE]
+Path=Door left.cur
+
+[SizeNESW]
+Path=Door right.cur
+
+[Wait]
+Path=Hourglass.cur
+
+[Crosshair]
+Path=Precision 1.cur
+
+[Hand]
+Path=Hand.cur
+
+[UpArrow]
+Path=Sword.cur
+
+[No]
+Path=Unavailable.cur
+

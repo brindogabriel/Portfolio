@@ -7,7 +7,11 @@ export default function ContactForm() {
     const [state, handleSubmit] = useForm("xgejjgra"); // Reemplaza con tu ID de formspree
 
     return (
-        <div className="bg-[#1a1410] border-[#8c6d4b] rounded-md overflow-hidden">
+        <div
+            className={`bg-[#1a1410] border-[#8c6d4b] rounded-md overflow-hidden ${
+                state.submitting ? "cursor-submitting" : ""
+            }`}
+        >
             {state.succeeded ? (
                 <div className="p-6 border-2 border-[#c19a49] bg-[#2a1e18] text-[#e8d0b0] rounded-md">
                     <div className="flex items-center gap-3 mb-3">
@@ -35,7 +39,12 @@ export default function ContactForm() {
                     </p>
                 </div>
             ) : (
-                <form onSubmit={handleSubmit} className="space-y-4 p-6">
+                <form
+                    onSubmit={handleSubmit}
+                    className={`space-y-4 p-6 ${
+                        state.submitting ? "cursor-submitting" : ""
+                    }`}
+                >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="space-y-2">
                             <label
