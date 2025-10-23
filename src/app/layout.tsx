@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     keywords:
         "Gabriel Brindo, desarrollador web, portfolio, full stack, React, Next.js, JavaScript, HTML, CSS, desarrollo web, proyectos, Argentina, diseño web responsivo, apps web",
     robots: {
-        index: true,
-        follow: true,
+        index: false,
+        follow: false,
         googleBot: {
-            index: true,
-            follow: true,
-            "max-image-preview": "large",
-            "max-snippet": -1,
+            index: false,
+            follow: false,
+            "max-image-preview": "none",
+            "max-snippet": 0,
         },
     },
     alternates: {
@@ -98,6 +98,8 @@ export default function RootLayout({
         <html lang="es" className="scroll-smooth" suppressHydrationWarning>
             <head>
                 <meta name="theme-color" content="#1a1410" />
+                <meta name="robots" content="noindex, nofollow" />
+                <meta name="googlebot" content="noindex, nofollow" />
             </head>
             <body
                 suppressHydrationWarning
