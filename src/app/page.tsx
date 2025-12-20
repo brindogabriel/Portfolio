@@ -75,7 +75,7 @@ export default function Home() {
                         </SmoothScrollLink>
                     </nav>
                     <Link
-                        href="/doc/CV_GABRIEL_BRINDO.pdf"
+                        href="/doc/CV_BRINDO_GABRIEL.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
