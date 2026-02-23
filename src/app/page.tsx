@@ -103,15 +103,16 @@ export default function Home() {
                             </Badge>
                         </div>
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-[#e8d0b0] leading-tight">
-                            Desarrollador Frontend{" "}
+                            Desarrollador Fullstack{" "}
                             <span className="text-[#c19a49]">
-                                Conquistador de Interfaces
+                                Conquistador de Interfaces y APIs
                             </span>
                         </h1>
                         <p className="text-xl mb-8 text-[#e8d0b0]/80">
-                            Construyo experiencias web impresionantes con la
+                            Construyo experiencias web completas con la
                             precisión y estrategia de un guerrero mongol.
-                            Especializado en React, Next.js y diseño UI/UX.
+                            Frontend con React y Next.js, backend con Laravel, y
+                            diseño UI/UX.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <SmoothScrollLink href="#proyectos">
@@ -167,14 +168,6 @@ export default function Home() {
                                         <div className="w-2 h-2 rounded-full bg-[#c19a49]"></div>
                                         <span>HTML5 / CSS3</span>
                                     </li>
-                                    {/* <li className="flex items-center gap-2">
-                                        <div className="w-2 h-2 rounded-full bg-[#c19a49]"></div>
-                                        <span>Redux / Context API</span>
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <div className="w-2 h-2 rounded-full bg-[#c19a49]"></div>
-                                        <span>React Query / SWR</span>
-                                    </li> */}
                                 </ul>
                             </CardContent>
                         </Card>
@@ -182,31 +175,23 @@ export default function Home() {
                         <Card className="bg-[#1a1410] border-[#8c6d4b]">
                             <CardHeader>
                                 <CardTitle className="text-[#c19a49] flex items-center gap-2">
-                                    <Layers className="h-5 w-5" /> Diseño UI/UX
+                                    <Layers className="h-5 w-5" /> Backend
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
                                 <ul className="space-y-2">
                                     <li className="flex items-center gap-2">
                                         <div className="w-2 h-2 rounded-full bg-[#c19a49]"></div>
-                                        <span>Tailwind CSS</span>
+                                        <span>Laravel / PHP</span>
                                     </li>
                                     <li className="flex items-center gap-2">
                                         <div className="w-2 h-2 rounded-full bg-[#c19a49]"></div>
-                                        <span>Bootstrap</span>
+                                        <span>MySQL / Bases de datos</span>
                                     </li>
                                     <li className="flex items-center gap-2">
                                         <div className="w-2 h-2 rounded-full bg-[#c19a49]"></div>
-                                        <span>Diseño Responsivo</span>
+                                        <span>APIs REST</span>
                                     </li>
-                                    {/* <li className="flex items-center gap-2">
-                                        <div className="w-2 h-2 rounded-full bg-[#c19a49]"></div>
-                                        <span>Animaciones CSS / GSAP</span>
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <div className="w-2 h-2 rounded-full bg-[#c19a49]"></div>
-                                        <span>Sistemas de Diseño</span>
-                                    </li> */}
                                 </ul>
                             </CardContent>
                         </Card>
@@ -214,12 +199,19 @@ export default function Home() {
                         <Card className="bg-[#1a1410] border-[#8c6d4b]">
                             <CardHeader>
                                 <CardTitle className="text-[#c19a49] flex items-center gap-2">
-                                    <Globe className="h-5 w-5" /> Otras
-                                    Habilidades
+                                    <Globe className="h-5 w-5" /> Diseño y más
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
                                 <ul className="space-y-2">
+                                    <li className="flex items-center gap-2">
+                                        <div className="w-2 h-2 rounded-full bg-[#c19a49]"></div>
+                                        <span>Tailwind CSS / Bootstrap</span>
+                                    </li>
+                                    <li className="flex items-center gap-2">
+                                        <div className="w-2 h-2 rounded-full bg-[#c19a49]"></div>
+                                        <span>Diseño UI/UX Responsivo</span>
+                                    </li>
                                     <li className="flex items-center gap-2">
                                         <div className="w-2 h-2 rounded-full bg-[#c19a49]"></div>
                                         <span>Git / GitHub</span>
@@ -230,16 +222,10 @@ export default function Home() {
                                     </li>
                                     <li className="flex items-center gap-2">
                                         <div className="w-2 h-2 rounded-full bg-[#c19a49]"></div>
-                                        <span>Optimización de Rendimiento</span>
+                                        <span>
+                                            Optimización y Accesibilidad
+                                        </span>
                                     </li>
-                                    <li className="flex items-center gap-2">
-                                        <div className="w-2 h-2 rounded-full bg-[#c19a49]"></div>
-                                        <span>Accesibilidad Web</span>
-                                    </li>
-                                    {/* <li className="flex items-center gap-2">
-                                        <div className="w-2 h-2 rounded-full bg-[#c19a49]"></div>
-                                        <span>Testing (Jest, RTL)</span>
-                                    </li> */}
                                 </ul>
                             </CardContent>
                         </Card>
@@ -262,43 +248,41 @@ export default function Home() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {/* <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
-                            <div className="h-48 overflow-hidden">
+                        <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
+                            <div className="aspect-video w-full overflow-hidden">
                                 <Image
-                                    src="/placeholder.svg?height=400&width=800"
+                                    src="/images/psicoagenda/psicoagenda.png"
                                     width={800}
                                     height={400}
-                                    alt="Proyecto Landing Page"
-                                    className="w-full h-full object-cover transition-transform hover:scale-105"
+                                    alt="Proyecto PsicoAgenda"
+                                    className="w-full h-full object-cover object-top transition-transform hover:scale-105"
                                 />
                             </div>
                             <CardHeader>
                                 <CardTitle className="text-[#c19a49]">
-                                    Landing Page Corporativa
+                                    PsicoAgenda
                                 </CardTitle>
                                 <CardDescription className="text-[#e8d0b0]/70">
-                                    Página de aterrizaje optimizada para
-                                    conversión
+                                    Agenda de citas para psicólogos y
+                                    psiquiatras
                                 </CardDescription>
                             </CardHeader>
                             <CardContent>
                                 <p className="mb-4 text-[#e8d0b0]/80">
-                                    Diseñé y desarrollé una landing page
-                                    corporativa con enfoque en SEO, velocidad de
-                                    carga y optimización para conversiones.
+                                    Agenda de citas para psicólogos y
+                                    psiquiatras con reserva de citas,
+                                    cancelación de citas, seguimiento de citas,
+                                    etc.
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
                                         Next.js
                                     </Badge>
                                     <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        GSAP
+                                        Laravel
                                     </Badge>
                                     <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        SEO
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        Analytics
+                                        Git
                                     </Badge>
                                 </div>
                             </CardContent>
@@ -316,15 +300,15 @@ export default function Home() {
                                     <Github className="mr-2 h-4 w-4" /> Código
                                 </Button>
                             </CardFooter>
-                        </Card> */}
+                        </Card>
                         <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
-                            <div className="h-48 overflow-hidden">
+                            <div className="aspect-video w-full overflow-hidden">
                                 <Image
                                     src="/images/WhaChatGenLink/dark.png"
                                     width={800}
                                     height={400}
                                     alt="WhaChatGenLink"
-                                    className="w-full h-full object-cover transition-transform hover:scale-105"
+                                    className="w-full h-full object-cover object-top transition-transform hover:scale-105"
                                 />
                             </div>
                             <CardHeader>
@@ -383,13 +367,13 @@ export default function Home() {
                         </Card>
 
                         <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
-                            <div className="h-48 overflow-hidden">
+                            <div className="aspect-video w-full overflow-hidden">
                                 <Image
                                     src="/images/copypast/iniciocopypast.png"
                                     width={800}
                                     height={400}
                                     alt="CopyPast"
-                                    className="w-full h-full object-cover transition-transform hover:scale-105"
+                                    className="w-full h-full object-cover object-top transition-transform hover:scale-105"
                                 />
                             </div>
                             <CardHeader>
@@ -446,13 +430,13 @@ export default function Home() {
                         </Card>
 
                         <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
-                            <div className="h-48">
+                            <div className="aspect-video w-full overflow-hidden">
                                 <Image
                                     src="/images/fomentarimg/iniciofomentar.png"
                                     width={800}
                                     height={400}
                                     alt="FomentAR"
-                                    className="w-full h-full object-cover transition-transform hover:scale-105"
+                                    className="w-full h-full object-cover object-top transition-transform hover:scale-105"
                                 />
                             </div>
                             <CardHeader>
@@ -549,16 +533,16 @@ export default function Home() {
                             </h2>
                             <p className="text-lg mb-4 text-[#e8d0b0]/80">
                                 Como un guerrero mongol de la era digital, me
-                                especializo en conquistar los desafíos del
-                                desarrollo web frontend con estrategia,
-                                adaptabilidad y precisión.
+                                especializo en desarrollo fullstack con
+                                estrategia, adaptabilidad y precisión: desde el
+                                frontend hasta APIs y bases de datos.
                             </p>
                             <p className="text-lg mb-6 text-[#e8d0b0]/80">
                                 Con más de 5 años de experiencia, he trabajado
                                 en proyectos para startups y empresas
-                                establecidas, siempre enfocado en crear
-                                interfaces que combinen estética y
-                                funcionalidad.
+                                establecidas, combinando React/Next.js en el
+                                cliente con Laravel en el servidor para crear
+                                aplicaciones completas.
                             </p>
                             <div className="space-y-4">
                                 <div className="flex items-center gap-3">
@@ -583,8 +567,9 @@ export default function Home() {
                                             Especialidad
                                         </h3>
                                         <p className="text-[#e8d0b0]/80">
-                                            Desarrollo Frontend, UI/UX,
-                                            Optimización de Rendimiento
+                                            Desarrollo Fullstack (React,
+                                            Next.js, Laravel), UI/UX, APIs y
+                                            bases de datos
                                         </p>
                                     </div>
                                 </div>
