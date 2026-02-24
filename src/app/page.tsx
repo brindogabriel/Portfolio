@@ -308,7 +308,7 @@ export default function Home() {
                         <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
                             <div className="aspect-video w-full overflow-hidden">
                                 <Image
-                                    src="/images/laravelbreezeapi-nextjs/laravel-next.png"
+                                    src="/images/LaravelBreezeApiNextJS/LaravelNext.png"
                                     width={800}
                                     height={400}
                                     alt="Laravel Breeze API - NextJS"
