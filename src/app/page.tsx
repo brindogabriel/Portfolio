@@ -391,7 +391,7 @@ export default function Home() {
                                     className="cursor-pointer"
                                 >
                                     <Image
-                                        src="/images/WhaChatGenLink/dark.png"
+                                        src="/images/WhaChatGenLink/wachatgenlink.png"
                                         width={800}
                                         height={400}
                                         alt="WhaChatGenLink"
@@ -462,7 +462,7 @@ export default function Home() {
                                     className="cursor-pointer"
                                 >
                                     <Image
-                                        src="/images/copypast/iniciocopypast.png"
+                                        src="/images/copypast/copypast.png"
                                         width={800}
                                         height={400}
                                         alt="CopyPast"
