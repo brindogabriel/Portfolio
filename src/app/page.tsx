@@ -279,10 +279,10 @@ export default function Home() {
                             </CardHeader>
                             <CardContent>
                                 <p className="mb-4 text-[#e8d0b0]/80">
-                                    Agenda de citas para psicólogos y
-                                    psiquiatras con reserva de citas,
-                                    cancelación de citas, seguimiento de citas,
-                                    etc.
+                                    Plataforma web moderna que permite a los
+                                    profesionales de la salud mental gestionar
+                                    sus citas, horarios y pacientes de manera
+                                    eficiente.
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
@@ -293,6 +293,12 @@ export default function Home() {
                                     </Badge>
                                     <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
                                         Git
+                                    </Badge>
+                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
+                                        TailwindCSS
+                                    </Badge>
+                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
+                                        FullCalendar
                                     </Badge>
                                 </div>
                             </CardContent>
@@ -339,9 +345,12 @@ export default function Home() {
                             </CardHeader>
                             <CardContent>
                                 <p className="mb-4 text-[#e8d0b0]/80">
-                                    Plantilla para proyectos con Laravel Breeze
-                                    API y NextJS con autenticación, permisos,
-                                    roles, etc.
+                                    Starter template fullstack que integra
+                                    Laravel Breeze en modo API con Next.js,
+                                    diseñado para acelerar el desarrollo de
+                                    aplicaciones modernas mediante una
+                                    arquitectura limpia, autenticación preparada
+                                    y configuración base lista para escalar.
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
@@ -352,6 +361,9 @@ export default function Home() {
                                     </Badge>
                                     <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
                                         Git
+                                    </Badge>
+                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
+                                        TailwindCSS
                                     </Badge>
                                 </div>
                             </CardContent>
