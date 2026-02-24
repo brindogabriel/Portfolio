@@ -14,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import {
     Card,
+    CardProject,
     CardContent,
     CardDescription,
     CardFooter,
@@ -251,7 +252,7 @@ export default function Home() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
+                        <CardProject className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
                             <div className="aspect-video w-full overflow-hidden">
                                 <Link
                                     href={`${BASE_GITHUB_URL}/PsicoAgenda`}
@@ -310,8 +311,8 @@ export default function Home() {
                                     </Button>
                                 </Link>
                             </CardFooter>
-                        </Card>
-                        <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
+                        </CardProject>
+                        <CardProject className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
                             <div className="aspect-video w-full overflow-hidden">
                                 <Link
                                     href={`${BASE_GITHUB_URL}/LaravelBreezeApi-NextJS`}
@@ -369,8 +370,8 @@ export default function Home() {
                                     </Button>
                                 </Link>
                             </CardFooter>
-                        </Card>
-                        <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
+                        </CardProject>
+                        <CardProject className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
                             <div className="aspect-video w-full overflow-hidden">
                                 <Link
                                     href="https://wha-chat-gen-link.vercel.app"
@@ -439,9 +440,9 @@ export default function Home() {
                                     </Button>
                                 </Link>
                             </CardFooter>
-                        </Card>
+                        </CardProject>
 
-                        <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
+                        <CardProject className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
                             <div className="aspect-video w-full overflow-hidden">
                                 <Link
                                     href="https://www.copypast.com.ar"
@@ -496,9 +497,9 @@ export default function Home() {
                                     </Button>
                                 </Link>
                             </CardFooter>
-                        </Card>
+                        </CardProject>
 
-                        <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
+                        <CardProject className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
                             <div className="aspect-video w-full overflow-hidden">
                                 <Link
                                     href={`${BASE_GITHUB_URL}/FomentAR`}
@@ -577,7 +578,7 @@ export default function Home() {
                                     </Button>
                                 </Link>
                             </CardFooter>
-                        </Card>
+                        </CardProject>
                     </div>
                 </div>
             </section>
