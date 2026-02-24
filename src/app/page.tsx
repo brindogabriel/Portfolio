@@ -646,83 +646,58 @@ export default function Home() {
                             </CardHeader>
                             <CardContent className="space-y-6">
                                 <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 rounded-full bg-[#c19a49]/20 flex items-center justify-center shrink-0">
-                                        <Mail className="h-6 w-6 text-[#c19a49]" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-[#e8d0b0]">
-                                            Email
-                                        </h3>
-                                        <Link
-                                            href="mailto:gabrielbrindo18@gmail.com?subject=Propuesta de trabajo"
-                                            rel="noopener noreferrer"
-                                            target="_blank"
-                                            className="text-[#e8d0b0]/80 break-all"
-                                        >
+                                    <Link
+                                        href="mailto:gabrielbrindo18@gmail.com?subject=Propuesta de trabajo"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                        className="text-[#e8d0b0]/80 inline-flex items-center gap-2 hover:bg-amber-600/20 p-2 rounded-md"
+                                    >
+                                        <div className="w-12 h-12 rounded-full bg-[#c19a49]/20 flex items-center justify-center shrink-0">
+                                            <Mail className="h-6 w-6 text-[#c19a49]" />
+                                        </div>
+                                        <div>
+                                            <h3 className="font-bold text-[#e8d0b0]">
+                                                Email
+                                            </h3>
                                             gabrielbrindo18@gmail.com
-                                        </Link>
-                                    </div>
+                                        </div>
+                                    </Link>
                                 </div>
                                 <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 rounded-full bg-[#c19a49]/20 flex items-center justify-center shrink-0">
-                                        <Linkedin className="h-6 w-6 text-[#c19a49]" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-[#e8d0b0]">
-                                            LinkedIn
-                                        </h3>
-                                        <Link
-                                            href={`${BASE_LINKEDIN_URL}/gabrielsebastianbrindo`}
-                                            target="_blank"
-                                            className="text-[#e8d0b0]/80 break-all"
-                                        >
+                                    <Link
+                                        href={`${BASE_LINKEDIN_URL}/gabrielsebastianbrindo`}
+                                        target="_blank"
+                                        className="text-[#e8d0b0]/80 inline-flex items-center gap-2 hover:bg-amber-600/20 p-2 rounded-md"
+                                    >
+                                        <div className="w-12 h-12 rounded-full bg-[#c19a49]/20 flex items-center justify-center shrink-0">
+                                            <Linkedin className="h-6 w-6 text-[#c19a49]" />
+                                        </div>
+                                        <div>
+                                            <h3 className="font-bold text-[#e8d0b0]">
+                                                LinkedIn
+                                            </h3>
                                             linkedin.com/in/gabrielsebastianbrindo
-                                        </Link>
-                                    </div>
+                                        </div>
+                                    </Link>
                                 </div>
-                                <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 rounded-full bg-[#c19a49]/20 flex items-center justify-center shrink-0">
-                                        <Github className="h-6 w-6 text-[#c19a49]" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-[#e8d0b0]">
-                                            GitHub
-                                        </h3>
-                                        <Link
-                                            href={`${BASE_GITHUB_URL}`}
-                                            target="_blank"
-                                            className="text-[#e8d0b0]/80 break-all"
-                                        >
+                                <div className="flex items-center gap-4 ">
+                                    <Link
+                                        href={`${BASE_GITHUB_URL}`}
+                                        target="_blank"
+                                        className="text-[#e8d0b0]/80 inline-flex items-center gap-2 hover:bg-amber-600/20 p-2 rounded-md"
+                                    >
+                                        <div className="w-12 h-12 rounded-full bg-[#c19a49]/20 flex items-center justify-center shrink-0">
+                                            <Github className="h-6 w-6 text-[#c19a49]" />
+                                        </div>
+                                        <div>
+                                            <h3 className="font-bold text-[#e8d0b0]">
+                                                GitHub
+                                            </h3>
                                             github.com/brindogabriel
-                                        </Link>
-                                    </div>
+                                        </div>
+                                    </Link>
                                 </div>
                             </CardContent>
-                            <CardFooter>
-                                <div className="flex gap-4">
-                                    <Link
-                                        href="https://github.com/brindogabriel"
-                                        target="_blank"
-                                        className="w-10 h-10 rounded-full bg-[#c19a49]/20 flex items-center justify-center hover:bg-[#c19a49]/40 transition-colors"
-                                    >
-                                        <Github className="h-5 w-5 text-[#c19a49]" />
-                                    </Link>
-                                    <Link
-                                        target="_blank"
-                                        href="https://www.linkedin.com/in/gabrielsebastianbrindo"
-                                        className="w-10 h-10 rounded-full bg-[#c19a49]/20 flex items-center justify-center hover:bg-[#c19a49]/40 transition-colors"
-                                    >
-                                        <Linkedin className="h-5 w-5 text-[#c19a49]" />
-                                    </Link>
-                                    <Link
-                                        target="_blank"
-                                        href="mailto:gabrielbrindo18@gmail.com?subject=Propuesta de trabajo"
-                                        className="w-10 h-10 rounded-full bg-[#c19a49]/20 flex items-center justify-center hover:bg-[#c19a49]/40 transition-colors"
-                                    >
-                                        <Mail className="h-5 w-5 text-[#c19a49]" />
-                                    </Link>
-                                </div>
-                            </CardFooter>
                         </Card>
 
                         <Card className="bg-[#1a1410] border-[#8c6d4b]">
