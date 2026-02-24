@@ -1,5 +1,5 @@
+"use client";
 import Image from "next/image";
-
 import Link from "next/link";
 import {
     Github,
@@ -9,6 +9,7 @@ import {
     Globe,
     Code,
     Layers,
+    Chrome,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -24,11 +25,17 @@ import {
 import { Badge } from "@/components/ui/badge";
 import SmoothScrollLink from "@/app/components/smooth-scroll-link";
 import ContactForm from "@/app/components/ContactForm";
-
+import { useState } from "react";
+import projectsData from "./data/projects.json";
+import type { Projects } from "./types";
 
 const BASE_GITHUB_URL = "https://github.com/brindogabriel";
 const BASE_LINKEDIN_URL = "https://www.linkedin.com/in";
 export default function Home() {
+    const allProjects = projectsData as Projects[];
+    const [showAll, setShowAll] = useState(false);
+    const visibleProjects = showAll ? allProjects : allProjects.slice(0, 3);
+
     return (
         <div className="min-h-screen bg-[#1a1410] text-[#e8d0b0] font-medieval">
             {/* Header/Navbar */}
@@ -251,347 +258,118 @@ export default function Home() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <CardProject className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
-                            <div className="aspect-video w-full overflow-hidden">
-                                <Link
-                                    href={`${BASE_GITHUB_URL}/PsicoAgenda`}
-                                    target="_blank"
-                                    className="cursor-pointer"
-                                >
-                                    <Image
-                                        src="/images/psicoagenda/psicoagenda.png"
-                                        width={800}
-                                        height={400}
-                                        alt="Proyecto PsicoAgenda"
-                                        className="w-full h-full object-cover object-top transition-transform hover:scale-105"
-                                    />
-                                </Link>
-                            </div>
-                            <CardHeader>
-                                <CardTitle className="text-[#c19a49]">
-                                    PsicoAgenda
-                                </CardTitle>
-                                <CardDescription className="text-[#e8d0b0]/70">
-                                    Agenda de citas para psicólogos y
-                                    psiquiatras
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="mb-4 text-[#e8d0b0]/80">
-                                    Plataforma web moderna que permite a los
-                                    profesionales de la salud mental gestionar
-                                    sus citas, horarios y pacientes de manera
-                                    eficiente.
-                                </p>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        Next.js
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        Laravel
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        Git
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        TailwindCSS
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        FullCalendar
-                                    </Badge>
-                                </div>
-                            </CardContent>
-                            <CardFooter className="flex justify-between">
-                                <Link
-                                    href={`${BASE_GITHUB_URL}/PsicoAgenda`}
-                                    target="_blank"
-                                    className="cursor-pointer"
-                                >
-                                    <Button
-                                        variant="outline"
-                                        className="border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20"
-                                    >
-                                        <Github className="mr-2 h-4 w-4" />{" "}
-                                        Código
-                                    </Button>
-                                </Link>
-                            </CardFooter>
-                        </CardProject>
-                        <CardProject className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
-                            <div className="aspect-video w-full overflow-hidden">
-                                <Link
-                                    href={`${BASE_GITHUB_URL}/LaravelBreezeApi-NextJS`}
-                                    target="_blank"
-                                    className="cursor-pointer"
-                                >
-                                    <Image
-                                        src="/images/LaravelBreezeApiNextJS/LaravelNext.png"
-                                        width={800}
-                                        height={400}
-                                        alt="Laravel Breeze API - NextJS"
-                                        className="w-full h-full object-cover object-top transition-transform hover:scale-105"
-                                    />
-                                </Link>
-                            </div>
-                            <CardHeader>
-                                <CardTitle className="text-[#c19a49]">
-                                    Laravel Breeze API - NextJS
-                                </CardTitle>
-                                <CardDescription className="text-[#e8d0b0]/70">
-                                    Plantilla para proyectos con Laravel Breeze
-                                    API y NextJS
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="mb-4 text-[#e8d0b0]/80">
-                                    Starter template fullstack que integra
-                                    Laravel Breeze en modo API con Next.js,
-                                    diseñado para acelerar el desarrollo de
-                                    aplicaciones modernas mediante una
-                                    arquitectura limpia, autenticación preparada
-                                    y configuración base lista para escalar.
-                                </p>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        Next.js
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        Laravel
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        Git
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        TailwindCSS
-                                    </Badge>
-                                </div>
-                            </CardContent>
-                            <CardFooter className="flex justify-between">
-                                <Link
-                                    href={`${BASE_GITHUB_URL}/LaravelBreezeApi-NextJS`}
-                                    target="_blank"
-                                    className="cursor-pointer"
-                                >
-                                    <Button
-                                        variant="outline"
-                                        className="border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20"
-                                    >
-                                        <Github className="mr-2 h-4 w-4" />{" "}
-                                        Código
-                                    </Button>
-                                </Link>
-                            </CardFooter>
-                        </CardProject>
-                        <CardProject className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
-                            <div className="aspect-video w-full overflow-hidden">
-                                <Link
-                                    href="https://wha-chat-gen-link.vercel.app"
-                                    target="_blank"
-                                    className="cursor-pointer"
-                                >
-                                    <Image
-                                        src="/images/WhaChatGenLink/wachatgenlink.png"
-                                        width={800}
-                                        height={400}
-                                        alt="WhaChatGenLink"
-                                        className="w-full h-full object-cover object-top transition-transform hover:scale-105"
-                                    />
-                                </Link>
-                            </div>
-                            <CardHeader>
-                                <CardTitle className="text-[#c19a49]">
-                                    WhaChatGenLink
-                                </CardTitle>
-                                <CardDescription className="text-[#e8d0b0]/70">
-                                    Generador de enlaces de WhatsApp
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="mb-4 text-[#e8d0b0]/80">
-                                    Plataforma para crear enlaces de WhatsApp
-                                    personalizados y QR codes para empresas y
-                                    emprendedores.
-                                </p>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        Next.js
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        TypeScript
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        Tailwind CSS
-                                    </Badge>
-                                </div>
-                            </CardContent>
-                            <CardFooter className="flex justify-between">
-                                <Link
-                                    href="https://wha-chat-gen-link.vercel.app"
-                                    target="_blank"
-                                    className="cursor-pointer"
-                                >
-                                    <Button
-                                        variant="outline"
-                                        className="cursor-pointer border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20"
-                                    >
-                                        Ver
-                                    </Button>
-                                </Link>
-                                <Link
-                                    href={`${BASE_GITHUB_URL}/WhaChatGenLink`}
-                                    target="_blank"
-                                    className="cursor-pointer"
-                                >
-                                    <Button
-                                        variant="outline"
-                                        className="cursor-pointer border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20"
-                                    >
-                                        <Github className="mr-2 h-4 w-4" />{" "}
-                                        Código
-                                    </Button>
-                                </Link>
-                            </CardFooter>
-                        </CardProject>
-
-                        <CardProject className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
-                            <div className="aspect-video w-full overflow-hidden">
-                                <Link
-                                    href="https://www.copypast.com.ar"
-                                    target="_blank"
-                                    className="cursor-pointer"
-                                >
-                                    <Image
-                                        src="/images/copypast/copypast.png"
-                                        width={800}
-                                        height={400}
-                                        alt="CopyPast"
-                                        className="w-full h-full object-cover object-top transition-transform hover:scale-105"
-                                    />
-                                </Link>
-                            </div>
-                            <CardHeader>
-                                <CardTitle className="text-[#c19a49]">
-                                    CopyPast
-                                </CardTitle>
-                                <CardDescription className="text-[#e8d0b0]/70">
-                                    E-commerce de productos de papelería
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="mb-4 text-[#e8d0b0]/80">
-                                    E-commerce de productos de papelería con
-                                    carrito de compras
-                                </p>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        React
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        Tailwind CSS
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        Supabase
-                                    </Badge>
-                                </div>
-                            </CardContent>
-                            <CardFooter className="flex justify-between">
-                                <Link
-                                    href="https://www.copypast.com.ar"
-                                    target="_blank"
-                                    className="cursor-pointer"
-                                >
-                                    <Button
-                                        variant="outline"
-                                        className="cursor-pointer border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20"
-                                    >
-                                        Ver
-                                    </Button>
-                                </Link>
-                            </CardFooter>
-                        </CardProject>
-
-                        <CardProject className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
-                            <div className="aspect-video w-full overflow-hidden">
-                                <Link
-                                    href={`${BASE_GITHUB_URL}/FomentAR`}
-                                    target="_blank"
-                                    className="cursor-pointer"
-                                >
-                                    <Image
-                                        src="/images/fomentarimg/iniciofomentar.png"
-                                        width={800}
-                                        height={400}
-                                        alt="FomentAR"
-                                        className="w-full h-full object-cover object-top transition-transform hover:scale-105"
-                                    />
-                                </Link>
-                            </div>
-                            <CardHeader>
-                                <CardTitle className="text-[#c19a49]">
-                                    FomentAR
-                                </CardTitle>
-                                <CardDescription className="text-[#e8d0b0]/70">
-                                    Sistema de gestion para administrar
-                                    sociedades de fomento
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="mb-4 text-[#e8d0b0]/80">
-                                    Sistema de gestión para administrar
-                                    sociedades de fomento, incluyendo gestión de
-                                    usuarios, eventos y pagos. <br />
-                                    Desarrollado en conjunto con mi compañero{" "}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {visibleProjects.map((proj) => (
+                            <CardProject
+                                key={proj.id}
+                                className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden"
+                            >
+                                <div className="aspect-video w-full overflow-hidden">
                                     <Link
-                                        className="underline text-[#c19a49] hover:text-[#e8d0b0]"
+                                        href={
+                                            proj.liveLink
+                                                ? proj.liveLink
+                                                : proj.githubLink
+                                                  ? `${BASE_GITHUB_URL}/${proj.githubLink}`
+                                                  : "#"
+                                        }
                                         target="_blank"
-                                        title="LinkedIn de Cristian Villavicencio"
-                                        href={`${BASE_LINKEDIN_URL}/cristian-villavicencio-19572a177`}
+                                        className="cursor-pointer"
                                     >
-                                        Cristian Villavicencio
+                                        <Image
+                                            src={proj.images?.[0]?.src ?? ""}
+                                            width={800}
+                                            height={400}
+                                            alt={proj.name}
+                                            className="w-full h-full object-cover object-top transition-transform hover:scale-105"
+                                        />
                                     </Link>
-                                </p>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        PHP
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        BOOTSTRAP
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        MySQL
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        JS
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        CSS
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        HTML
-                                    </Badge>
-                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
-                                        FullCalendar
-                                    </Badge>
                                 </div>
-                            </CardContent>
-                            <CardFooter className="flex justify-between">
-                                <Link
-                                    href={`${BASE_GITHUB_URL}/FomentAR`}
-                                    target="_blank"
-                                    className="cursor-pointer"
-                                >
-                                    <Button
-                                        variant="outline"
-                                        className="cursor-pointer border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20"
-                                    >
-                                        <Github className="mr-2 h-4 w-4" />
-                                        Código
-                                    </Button>
-                                </Link>
-                            </CardFooter>
-                        </CardProject>
+                                <CardHeader>
+                                    <CardTitle className="text-[#c19a49]">
+                                        {proj.name}
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="mb-4 text-[#e8d0b0]/80">
+                                        {proj.description.presentacion}
+                                    </p>
+                                    {proj.coworker && (
+                                        <p className="mb-4 text-[#e8d0b0]/80">
+                                            Desarrollado en conjunto con mi
+                                            compañero{" "}
+                                            <Link
+                                                className="underline text-[#c19a49] hover:text-[#e8d0b0]"
+                                                target="_blank"
+                                                href={proj.coworker.linkedin}
+                                            >
+                                                {proj.coworker.name}
+                                            </Link>
+                                        </p>
+                                    )}
+                                    <div className="flex flex-wrap gap-2 mb-4">
+                                        {proj.tecnologies.map((t) => (
+                                            <Badge
+                                                key={t}
+                                                className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]"
+                                            >
+                                                {t}
+                                            </Badge>
+                                        ))}
+                                    </div>
+                                </CardContent>
+                                {(() => {
+                                    const hasLive = !!proj.liveLink;
+                                    const hasGit = !!proj.githubLink;
+                                    const justifyClass = hasLive && hasGit ? "justify-between" : "justify-center";
+                                    return (
+                                        <CardFooter
+                                            className={`flex ${justifyClass} w-full`}
+                                        >
+                                            {hasLive && (
+                                                <Link
+                                                    href={proj.liveLink!}
+                                                    target="_blank"
+                                                    className="cursor-pointer"
+                                                >
+                                                    <Button
+                                                        variant="outline"
+                                                        className="cursor-pointer border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20 min-w-[90px]"
+                                                    >
+                                                        <Chrome className="mr-2 h-4 w-4" /> Ver
+                                                    </Button>
+                                                </Link>
+                                            )}
+                                            {hasGit && (
+                                                <Link
+                                                    href={`${BASE_GITHUB_URL}/${proj.githubLink}`}
+                                                    target="_blank"
+                                                    className="cursor-pointer"
+                                                >
+                                                    <Button
+                                                        variant="outline"
+                                                        className="border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20 min-w-[90px]"
+                                                    >
+                                                        <Github className="mr-2 h-4 w-4" /> Código
+                                                    </Button>
+                                                </Link>
+                                            )}
+                                        </CardFooter>
+                                    );
+                                })()}
+                            </CardProject>
+                        ))}
                     </div>
+                    {allProjects.length > 3 && (
+                        <div className="mt-8 text-center">
+                            <Button
+                                variant="secondary"
+                                onClick={() => setShowAll(!showAll)}
+                            >
+                                {showAll ? "Mostrar menos" : "Mostrar más"}
+                            </Button>
+                        </div>
+                    )}
                 </div>
             </section>
 
