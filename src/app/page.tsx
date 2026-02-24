@@ -253,13 +253,19 @@ export default function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
                             <div className="aspect-video w-full overflow-hidden">
-                                <Image
-                                    src="/images/psicoagenda/psicoagenda.png"
-                                    width={800}
-                                    height={400}
-                                    alt="Proyecto PsicoAgenda"
-                                    className="w-full h-full object-cover object-top transition-transform hover:scale-105"
-                                />
+                                <Link
+                                    href={`${BASE_GITHUB_URL}/PsicoAgenda`}
+                                    target="_blank"
+                                    className="cursor-pointer"
+                                >
+                                    <Image
+                                        src="/images/psicoagenda/psicoagenda.png"
+                                        width={800}
+                                        height={400}
+                                        alt="Proyecto PsicoAgenda"
+                                        className="w-full h-full object-cover object-top transition-transform hover:scale-105"
+                                    />
+                                </Link>
                             </div>
                             <CardHeader>
                                 <CardTitle className="text-[#c19a49]">
@@ -307,13 +313,19 @@ export default function Home() {
                         </Card>
                         <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
                             <div className="aspect-video w-full overflow-hidden">
-                                <Image
-                                    src="/images/LaravelBreezeApiNextJS/LaravelNext.png"
-                                    width={800}
-                                    height={400}
-                                    alt="Laravel Breeze API - NextJS"
-                                    className="w-full h-full object-cover object-top transition-transform hover:scale-105"
-                                />
+                                <Link
+                                    href={`${BASE_GITHUB_URL}/LaravelBreezeApi-NextJS`}
+                                    target="_blank"
+                                    className="cursor-pointer"
+                                >
+                                    <Image
+                                        src="/images/LaravelBreezeApiNextJS/LaravelNext.png"
+                                        width={800}
+                                        height={400}
+                                        alt="Laravel Breeze API - NextJS"
+                                        className="w-full h-full object-cover object-top transition-transform hover:scale-105"
+                                    />
+                                </Link>
                             </div>
                             <CardHeader>
                                 <CardTitle className="text-[#c19a49]">
@@ -360,13 +372,19 @@ export default function Home() {
                         </Card>
                         <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
                             <div className="aspect-video w-full overflow-hidden">
-                                <Image
-                                    src="/images/WhaChatGenLink/dark.png"
-                                    width={800}
-                                    height={400}
-                                    alt="WhaChatGenLink"
-                                    className="w-full h-full object-cover object-top transition-transform hover:scale-105"
-                                />
+                                <Link
+                                    href="https://wha-chat-gen-link.vercel.app"
+                                    target="_blank"
+                                    className="cursor-pointer"
+                                >
+                                    <Image
+                                        src="/images/WhaChatGenLink/dark.png"
+                                        width={800}
+                                        height={400}
+                                        alt="WhaChatGenLink"
+                                        className="w-full h-full object-cover object-top transition-transform hover:scale-105"
+                                    />
+                                </Link>
                             </div>
                             <CardHeader>
                                 <CardTitle className="text-[#c19a49]">
@@ -425,13 +443,19 @@ export default function Home() {
 
                         <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
                             <div className="aspect-video w-full overflow-hidden">
-                                <Image
-                                    src="/images/copypast/iniciocopypast.png"
-                                    width={800}
-                                    height={400}
-                                    alt="CopyPast"
-                                    className="w-full h-full object-cover object-top transition-transform hover:scale-105"
-                                />
+                                <Link
+                                    href="https://www.copypast.com.ar"
+                                    target="_blank"
+                                    className="cursor-pointer"
+                                >
+                                    <Image
+                                        src="/images/copypast/iniciocopypast.png"
+                                        width={800}
+                                        height={400}
+                                        alt="CopyPast"
+                                        className="w-full h-full object-cover object-top transition-transform hover:scale-105"
+                                    />
+                                </Link>
                             </div>
                             <CardHeader>
                                 <CardTitle className="text-[#c19a49]">
@@ -476,13 +500,19 @@ export default function Home() {
 
                         <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
                             <div className="aspect-video w-full overflow-hidden">
-                                <Image
-                                    src="/images/fomentarimg/iniciofomentar.png"
-                                    width={800}
-                                    height={400}
-                                    alt="FomentAR"
-                                    className="w-full h-full object-cover object-top transition-transform hover:scale-105"
-                                />
+                                <Link
+                                    href={`${BASE_GITHUB_URL}/FomentAR`}
+                                    target="_blank"
+                                    className="cursor-pointer"
+                                >
+                                    <Image
+                                        src="/images/fomentarimg/iniciofomentar.png"
+                                        width={800}
+                                        height={400}
+                                        alt="FomentAR"
+                                        className="w-full h-full object-cover object-top transition-transform hover:scale-105"
+                                    />
+                                </Link>
                             </div>
                             <CardHeader>
                                 <CardTitle className="text-[#c19a49]">
