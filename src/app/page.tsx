@@ -24,6 +24,9 @@ import { Badge } from "@/components/ui/badge";
 import SmoothScrollLink from "@/app/components/smooth-scroll-link";
 import ContactForm from "@/app/components/ContactForm";
 
+
+const BASE_GITHUB_URL = "https://github.com/brindogabriel";
+const BASE_LINKEDIN_URL = "https://www.linkedin.com/in";
 export default function Home() {
     return (
         <div className="min-h-screen bg-[#1a1410] text-[#e8d0b0] font-medieval">
@@ -287,18 +290,72 @@ export default function Home() {
                                 </div>
                             </CardContent>
                             <CardFooter className="flex justify-between">
-                                <Button
-                                    variant="outline"
-                                    className="border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20"
+                                <Link
+                                    href={`${BASE_GITHUB_URL}/PsicoAgenda`}
+                                    target="_blank"
+                                    className="cursor-pointer"
                                 >
-                                    Ver Demo
-                                </Button>
-                                <Button
-                                    variant="outline"
-                                    className="border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20"
+                                    <Button
+                                        variant="outline"
+                                        className="border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20"
+                                    >
+                                        <Github className="mr-2 h-4 w-4" />{" "}
+                                        Código
+                                    </Button>
+                                </Link>
+                            </CardFooter>
+                        </Card>
+                        <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
+                            <div className="aspect-video w-full overflow-hidden">
+                                <Image
+                                    src="/images/laravelbreezeapi-nextjs/laravel-next.png"
+                                    width={800}
+                                    height={400}
+                                    alt="Laravel Breeze API - NextJS"
+                                    className="w-full h-full object-cover object-top transition-transform hover:scale-105"
+                                />
+                            </div>
+                            <CardHeader>
+                                <CardTitle className="text-[#c19a49]">
+                                    Laravel Breeze API - NextJS
+                                </CardTitle>
+                                <CardDescription className="text-[#e8d0b0]/70">
+                                    Plantilla para proyectos con Laravel Breeze
+                                    API y NextJS
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="mb-4 text-[#e8d0b0]/80">
+                                    Plantilla para proyectos con Laravel Breeze
+                                    API y NextJS con autenticación, permisos,
+                                    roles, etc.
+                                </p>
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
+                                        Next.js
+                                    </Badge>
+                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
+                                        Laravel
+                                    </Badge>
+                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
+                                        Git
+                                    </Badge>
+                                </div>
+                            </CardContent>
+                            <CardFooter className="flex justify-between">
+                                <Link
+                                    href={`${BASE_GITHUB_URL}/LaravelBreezeApi-NextJS`}
+                                    target="_blank"
+                                    className="cursor-pointer"
                                 >
-                                    <Github className="mr-2 h-4 w-4" /> Código
-                                </Button>
+                                    <Button
+                                        variant="outline"
+                                        className="border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20"
+                                    >
+                                        <Github className="mr-2 h-4 w-4" />{" "}
+                                        Código
+                                    </Button>
+                                </Link>
                             </CardFooter>
                         </Card>
                         <Card className="bg-[#1a1410] border-[#8c6d4b] overflow-hidden">
@@ -351,7 +408,7 @@ export default function Home() {
                                     </Button>
                                 </Link>
                                 <Link
-                                    href="https://github.com/brindogabriel/WhaChatGenLink"
+                                    href={`${BASE_GITHUB_URL}/WhaChatGenLink`}
                                     target="_blank"
                                     className="cursor-pointer"
                                 >
@@ -414,18 +471,6 @@ export default function Home() {
                                         Ver
                                     </Button>
                                 </Link>
-                                {/* <Link
-                                    href="https://github.com/brindogabriel/WhaChatGenLink"
-                                    target="_blank"
-                                >
-                                    <Button
-                                        variant="outline"
-                                        className="border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20"
-                                    >
-                                        <Github className="mr-2 h-4 w-4" />{" "}
-                                        Código
-                                    </Button>
-                                </Link> */}
                             </CardFooter>
                         </Card>
 
@@ -458,7 +503,7 @@ export default function Home() {
                                         className="underline text-[#c19a49] hover:text-[#e8d0b0]"
                                         target="_blank"
                                         title="LinkedIn de Cristian Villavicencio"
-                                        href="https://www.linkedin.com/in/cristian-villavicencio-19572a177"
+                                        href={`${BASE_LINKEDIN_URL}/cristian-villavicencio-19572a177`}
                                     >
                                         Cristian Villavicencio
                                     </Link>
@@ -482,23 +527,14 @@ export default function Home() {
                                     <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
                                         HTML
                                     </Badge>
+                                    <Badge className="bg-[#3d2e24] text-[#e8d0b0] hover:bg-[#4d3e34]">
+                                        FullCalendar
+                                    </Badge>
                                 </div>
                             </CardContent>
                             <CardFooter className="flex justify-between">
-                                {/* <Link
-                                    href="https://wha-chat-gen-link.vercel.app"
-                                    target="_blank"
-                                    className="cursor-pointer"
-                                >
-                                    <Button
-                                        variant="outline"
-                                        className="cursor-pointer border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20"
-                                    >
-                                        Ver
-                                    </Button>
-                                </Link> */}
                                 <Link
-                                    href="https://github.com/brindogabriel/FomentAR"
+                                    href={`${BASE_GITHUB_URL}/FomentAR`}
                                     target="_blank"
                                     className="cursor-pointer"
                                 >
@@ -512,13 +548,6 @@ export default function Home() {
                                 </Link>
                             </CardFooter>
                         </Card>
-                    </div>
-
-                    <div className="text-center mt-12">
-                        <Button className="bg-[#c19a49] hover:bg-[#a17a29] text-[#1a1410] font-bold">
-                            Ver Todos los Proyectos
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
                     </div>
                 </div>
             </section>
@@ -554,7 +583,7 @@ export default function Home() {
                                             Idiomas
                                         </h3>
                                         <p className="text-[#e8d0b0]/80">
-                                            Español (Nativo), Inglés (Básico)
+                                            Inglés (A2)
                                         </p>
                                     </div>
                                 </div>
@@ -624,9 +653,14 @@ export default function Home() {
                                         <h3 className="font-bold text-[#e8d0b0]">
                                             Email
                                         </h3>
-                                        <p className="text-[#e8d0b0]/80 break-all">
+                                        <Link
+                                            href="mailto:gabrielbrindo18@gmail.com?subject=Propuesta de trabajo"
+                                            rel="noopener noreferrer"
+                                            target="_blank"
+                                            className="text-[#e8d0b0]/80 break-all"
+                                        >
                                             gabrielbrindo18@gmail.com
-                                        </p>
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4">
@@ -637,9 +671,13 @@ export default function Home() {
                                         <h3 className="font-bold text-[#e8d0b0]">
                                             LinkedIn
                                         </h3>
-                                        <p className="text-[#e8d0b0]/80 break-all">
+                                        <Link
+                                            href={`${BASE_LINKEDIN_URL}/gabrielsebastianbrindo`}
+                                            target="_blank"
+                                            className="text-[#e8d0b0]/80 break-all"
+                                        >
                                             linkedin.com/in/gabrielsebastianbrindo
-                                        </p>
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4">
@@ -650,9 +688,13 @@ export default function Home() {
                                         <h3 className="font-bold text-[#e8d0b0]">
                                             GitHub
                                         </h3>
-                                        <p className="text-[#e8d0b0]/80 break-all">
+                                        <Link
+                                            href={`${BASE_GITHUB_URL}`}
+                                            target="_blank"
+                                            className="text-[#e8d0b0]/80 break-all"
+                                        >
                                             github.com/brindogabriel
-                                        </p>
+                                        </Link>
                                     </div>
                                 </div>
                             </CardContent>
