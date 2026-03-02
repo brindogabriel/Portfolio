@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
      url: 'https://www.gabrielbrindo.com.ar',
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: 'weekly',
       priority: 1,
     },
   ]
