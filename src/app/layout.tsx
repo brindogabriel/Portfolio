@@ -10,78 +10,84 @@ const medievalSharp = MedievalSharp({
 });
 
 export const metadata: Metadata = {
-    title: "Gabriel Brindo | Desarrollador Web Full Stack | Argentina",
+    metadataBase: new URL("https://www.gabrielbrindo.com.ar"),
+
+    title: {
+        default: "Gabriel Brindo | Desarrollador Web Full Stack",
+        template: "%s | Desarrollo Web Profesional",
+    },
+
     description:
-        "Soy Gabriel Brindo, desarrollador web full stack argentino. Creo sitios y aplicaciones modernas con React y Next.js. Tu próxima solución digital empieza aquí.",
-    keywords:
-        "Gabriel Brindo, desarrollador web, portfolio, full stack, React, Next.js, JavaScript, HTML, CSS, desarrollo web, proyectos, Argentina, diseño web responsivo, apps web",
-    robots: {
-        index: false,
-        follow: false,
-        googleBot: {
-            index: false,
-            follow: false,
-            "max-image-preview": "none",
-            "max-snippet": 0,
-        },
-    },
-    alternates: {
-        canonical: "https://www.gabrielbrindo.com.ar/",
-        languages: {
-            "es-AR": "https://www.gabrielbrindo.com.ar/",
-        },
-    },
-    authors: [
-        { name: "Gabriel Brindo", url: "https://www.gabrielbrindo.com.ar" },
+        "Portfolio profesional de Gabriel Brindo — Desarrollador Web Full Stack: React, Next.js, Tailwind CSS, PHP y más. Proyectos reales, código limpio y soluciones orientadas a resultados.",
+
+    keywords: [
+        "Desarrollador Web Full Stack",
+        "React Developer Portfolio",
+        "Next.js Resume",
+        "Developer Argentina",
+        "UI/UX + Frontend",
+        "Web Performance",
     ],
-    category: "technology",
+
+    authors: [
+        {
+            name: "Gabriel Brindo",
+            url: "https://www.linkedin.com/in/gabrielsebastianbrindo",
+        },
+    ],
+
     creator: "Gabriel Brindo",
     publisher: "Gabriel Brindo",
-    metadataBase: new URL("https://www.gabrielbrindo.com.ar"),
+    category: "technology",
+
+    robots: {
+        index: true,
+        follow: true,
+    },
+
+    alternates: {
+        canonical: "https://www.gabrielbrindo.com.ar",
+    },
+
     openGraph: {
+        type: "website",
         locale: "es_AR",
-        title: "Gabriel Brindo | Desarrollador Web Full Stack | Argentina",
+        url: "https://www.gabrielbrindo.com.ar",
+        siteName: "Portfolio de Gabriel Brindo",
+
+        title: "Gabriel Brindo | Desarrollador Web Full Stack",
         description:
-            "Desarrollador web argentino especializado en sitios modernos y aplicaciones web personalizadas. Experto en React, Next.js, JavaScript, HTML y CSS.",
-        url: "https://www.gabrielbrindo.com.ar/",
-        siteName: "Gabriel Brindo - Portfolio Profesional",
+            "Portfolio profesional con proyectos reales y enfoque en tecnologías modernas (React, Next.js, Tailwind CSS). Disponible para oportunidades laborales.",
+
         images: [
             {
-                url: "https://www.gabrielbrindo.com.ar/images/og-image.jpg", // Recomendado: usá una imagen OG dedicada y atractiva
+                url: "/images/og-image.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Gabriel Brindo - Desarrollador Web Full Stack",
-                type: "image/jpeg",
+                alt: "Gabriel Brindo - Portfolio de Desarrollador Web",
             },
         ],
-        type: "website",
     },
+
     twitter: {
         card: "summary_large_image",
-        title: "Gabriel Brindo | Desarrollador Web Full Stack | Argentina",
+        title: "Gabriel Brindo | Web Developer",
         description:
-            "Desarrollador web argentino especializado en crear sitios web modernos y apps personalizadas con React y Next.js.",
-        images: ["https://www.gabrielbrindo.com.ar/images/og-image.jpg"],
-        creator: "@gabrielbrindo",
-        site: "@gabrielbrindo",
+            "Portfolio profesional de desarrollador web Full Stack — React, Next.js, Tailwind CSS, Laravel y más.",
+        images: ["/images/og-image.jpg"],
     },
+
     icons: {
-        icon: [{ url: "/favicon.ico" }],
+        icon: "/favicon.ico",
         shortcut: "/favicon.ico",
-        apple: "/favicon.ico",
-        other: [
-            {
-                rel: "apple-touch-icon",
-                url: "/favicon.ico",
-            },
-        ],
+        apple: "/apple-touch-icon.png",
     },
+
     formatDetection: {
         telephone: true,
-        date: false,
-        address: false,
         email: true,
-        url: false,
+        address: false,
+        url: true,
     },
 };
 

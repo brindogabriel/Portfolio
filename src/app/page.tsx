@@ -10,6 +10,7 @@ import {
     Code,
     Layers,
     Chrome,
+    FileUser,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -85,18 +86,32 @@ export default function Home() {
                             Contacto
                         </SmoothScrollLink>
                     </nav>
-                    <Link
-                        href="/doc/CV_GABRIEL_BRINDO.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Button
-                            variant="outline"
-                            className="border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20 cursor-pointer"
+                    <div className="flex items-end gap-4">
+                        <Link
+                            href={`${BASE_LINKEDIN_URL}/gabrielsebastianbrindo`}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            Descargar CV
-                        </Button>
-                    </Link>
+                            <Button
+                                variant="outline"
+                                className="border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20 cursor-pointer"
+                            >
+                                Linkedin
+                            </Button>
+                        </Link>
+                        <Link
+                            href="/doc/CV_GABRIEL_BRINDO.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Button
+                                variant="outline"
+                                className="border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20 cursor-pointer"
+                            >
+                                Descargar CV
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
             </header>
 
@@ -106,32 +121,48 @@ export default function Home() {
                 className="pt-24 pb-16 md:pt-32 md:pb-24 bg-[url('/images/fondobanner.png')] bg-cover bg-center relative"
             >
                 <div className="absolute inset-0 bg-[#1a1410]/80"></div>
-                <div className="container mx-auto px-4 relative z-1">
+
+                <div className="container mx-auto px-4 relative z-10">
                     <div className="max-w-3xl mx-auto text-center">
-                        <div className="inline-block p-1 border-2 border-[#c19a49] mb-4">
-                            <Badge className="bg-[#c19a49] text-[#1a1410] hover:bg-[#a17a29] px-3">
-                                Disponible para contratar
-                            </Badge>
+                        {/* Disponibilidad */}
+                        <div className="mb-6 text-sm md:text-base text-[#e8d0b0]/80">
+                            📍 Buenos Aires, Argentina <br />
+                            <span className="text-[#c19a49] font-semibold">
+                                Disponible para empleo full-time
+                            </span>
                         </div>
+
+                        {/* Nombre + Rol */}
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-[#e8d0b0] leading-tight">
-                            Desarrollador Fullstack{" "}
-                            <span className="text-[#c19a49]">
-                                Conquistador de Interfaces y APIs
+                            Gabriel Brindo
+                            <span className="block text-[#c19a49] mt-2">
+                                Desarrollador Web Full Stack
                             </span>
                         </h1>
-                        <p className="text-xl mb-8 text-[#e8d0b0]/80">
-                            Construyo experiencias web completas con la
-                            precisión y estrategia de un guerrero mongol.
-                            Frontend con React y Next.js, backend con Laravel, y
-                            diseño UI/UX.
+
+                        {/* Propuesta de valor */}
+                        <p className="text-xl mb-6 text-[#e8d0b0]/80">
+                            Desarrollo aplicaciones web modernas y escalables
+                            con React, Next.js y Laravel. Enfocado en
+                            rendimiento, arquitectura limpia y soluciones
+                            orientadas a negocio.
                         </p>
+
+                        {/* Stack visible */}
+                        <p className="text-sm text-[#e8d0b0]/60 mb-8">
+                            React · Next.js · Laravel · TypeScript · Tailwind ·
+                            APIs REST · SEO
+                        </p>
+
+                        {/* Botones */}
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <SmoothScrollLink href="#proyectos">
                                 <Button className="bg-[#c19a49] hover:bg-[#a17a29] text-[#1a1410] font-bold w-full">
-                                    Ver Proyectos{" "}
+                                    Ver Proyectos
                                     <ArrowRight className="ml-2 h-4 w-4" />
                                 </Button>
                             </SmoothScrollLink>
+
                             <SmoothScrollLink href="#contacto">
                                 <Button
                                     variant="outline"
@@ -144,7 +175,6 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-
             {/* Skills Section */}
             <section id="habilidades" className="py-16 bg-[#2a1e18]">
                 <div className="container mx-auto px-4">
@@ -153,8 +183,9 @@ export default function Home() {
                             Mis Habilidades
                         </h2>
                         <p className="text-lg max-w-2xl mx-auto text-[#e8d0b0]/80">
-                            Como un arquero a caballo mongol, domino múltiples
-                            tecnologías con precisión y adaptabilidad.
+                            Tecnologías y herramientas que utilizo para
+                            desarrollar aplicaciones modernas, escalables y
+                            mantenibles.
                         </p>
                     </div>
 
@@ -249,12 +280,11 @@ export default function Home() {
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#c19a49]">
-                            Mis Conquistas
+                            Proyectos Destacados
                         </h2>
                         <p className="text-lg max-w-2xl mx-auto text-[#e8d0b0]/80">
-                            Como un khan mongol, he liderado y conquistado
-                            diversos territorios digitales. Estos son mis
-                            proyectos más destacados.
+                            Aplicaciones reales desarrolladas con foco en
+                            experiencia de usuario, arquitectura y rendimiento.
                         </p>
                     </div>
 
@@ -321,7 +351,10 @@ export default function Home() {
                                 {(() => {
                                     const hasLive = !!proj.liveLink;
                                     const hasGit = !!proj.githubLink;
-                                    const justifyClass = hasLive && hasGit ? "justify-between" : "justify-center";
+                                    const justifyClass =
+                                        hasLive && hasGit
+                                            ? "justify-between"
+                                            : "justify-center";
                                     return (
                                         <CardFooter
                                             className={`flex ${justifyClass} w-full`}
@@ -336,7 +369,8 @@ export default function Home() {
                                                         variant="outline"
                                                         className="cursor-pointer border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20 min-w-[90px]"
                                                     >
-                                                        <Chrome className="mr-2 h-4 w-4" /> Ver
+                                                        <Chrome className="mr-2 h-4 w-4" />{" "}
+                                                        Ver
                                                     </Button>
                                                 </Link>
                                             )}
@@ -350,7 +384,8 @@ export default function Home() {
                                                         variant="outline"
                                                         className="border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20 min-w-[90px]"
                                                     >
-                                                        <Github className="mr-2 h-4 w-4" /> Código
+                                                        <Github className="mr-2 h-4 w-4" />{" "}
+                                                        Código
                                                     </Button>
                                                 </Link>
                                             )}
@@ -382,17 +417,16 @@ export default function Home() {
                                 Sobre Mí
                             </h2>
                             <p className="text-lg mb-4 text-[#e8d0b0]/80">
-                                Como un guerrero mongol de la era digital, me
-                                especializo en desarrollo fullstack con
-                                estrategia, adaptabilidad y precisión: desde el
-                                frontend hasta APIs y bases de datos.
+                                Soy desarrollador web Full Stack especializado
+                                en React, Next.js y Laravel. Me enfoco en crear
+                                aplicaciones escalables, optimizadas y con
+                                arquitectura limpia.
                             </p>
                             <p className="text-lg mb-6 text-[#e8d0b0]/80">
-                                Con más de 5 años de experiencia, he trabajado
-                                en proyectos para startups y empresas
-                                establecidas, combinando React/Next.js en el
-                                cliente con Laravel en el servidor para crear
-                                aplicaciones completas.
+                                He trabajado en proyectos reales incluyendo
+                                e-commerce y sistemas de gestión, combinando
+                                frontend moderno con backends robustos y APIs
+                                bien estructuradas.
                             </p>
                             <div className="space-y-4">
                                 <div className="flex items-center gap-3">
@@ -558,11 +592,7 @@ export default function Home() {
                         <div className="text-center md:text-right">
                             <p className="text-[#e8d0b0]/60 text-sm">
                                 &copy; {new Date().getFullYear()} Gabriel
-                                Brindo. Todos los derechos reservados.
-                            </p>
-                            <p className="text-[#e8d0b0]/60 text-sm mt-1">
-                                Diseñado y desarrollado con la estrategia de un
-                                guerrero mongol.
+                                Brindo.
                             </p>
                         </div>
                     </div>
