@@ -1,19 +1,20 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { Home, ArrowLeft } from "lucide-react";
-
+import { Home } from "lucide-react";
+import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+    title: "404 - Página no encontrada",
+    robots: {
+        index: false,
+        follow: false,
+    },
+};
 
 export default function NotFound() {
     return (
         <>
-            <head>
-                <meta name="theme-color" content="#1a1410" />
-                <meta name="robots" content="noindex, nofollow" />
-                <meta name="googlebot" content="noindex, nofollow" />
-            </head>
             <div className="min-h-screen bg-[#1a1410] text-[#e8d0b0] font-medieval flex flex-col items-center justify-center p-4 relative overflow-hidden">
                 {/* Contenido principal */}
                 <div className="max-w-3xl w-full text-center relative z-10">
@@ -22,7 +23,7 @@ export default function NotFound() {
                             src="/images/Mangudai_stride.webp"
                             width={400}
                             height={400}
-                            alt="Guerrero Mongol"
+                            alt="Ilustración decorativa"
                             unoptimized
                             className="object-contain"
                         />
@@ -31,40 +32,19 @@ export default function NotFound() {
                         </div>
                     </div>
 
-                    <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[#c19a49]">
-                        ¡Territorio Desconocido!
-                    </h1>
-
                     <div className="bg-[#2a1e18] border-2 border-[#8c6d4b] p-4 md:p-6 mb-6 md:mb-8 max-w-2xl mx-auto">
-                        <p className="text-lg md:text-xl mb-3 md:mb-4">
-                            Como un explorador mongol, te has aventurado
-                            demasiado lejos y has llegado a tierras
-                            inexploradas.
-                        </p>
                         <p className="text-base md:text-lg mb-3 md:mb-4">
-                            La página que buscas ha sido conquistada por otro
-                            khan o nunca existió en este territorio.
-                        </p>
-                        <p className="text-base md:text-lg">
-                            Regresa a la base para planificar tu próxima
-                            conquista.
+                            La página que buscas no está disponible. Volvé al
+                            inicio para continuar navegando.
                         </p>
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
                         <Link href="/" className="w-full sm:w-auto">
                             <Button className="bg-[#c19a49] hover:bg-[#a17a29] text-[#1a1410] font-bold w-full">
-                                <Home className="mr-2 h-5 w-5" /> Volver al
-                                Campamento Base
+                                <Home className="mr-2 h-5 w-5" /> Volver
                             </Button>
                         </Link>
-                        <Button
-                            onClick={() => window.history.back()}
-                            variant="outline"
-                            className="border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20 w-full sm:w-auto"
-                        >
-                            <ArrowLeft className="mr-2 h-5 w-5" /> Regresar
-                        </Button>
                     </div>
                 </div>
 

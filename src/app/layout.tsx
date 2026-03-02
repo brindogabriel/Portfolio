@@ -13,20 +13,20 @@ export const metadata: Metadata = {
     metadataBase: new URL("https://www.gabrielbrindo.com.ar"),
 
     title: {
-        default: "Gabriel Brindo | Desarrollador Web Full Stack",
+        default: "Gabriel Brindo | Desarrollador Web Full Stack en Argentina",
         template: "%s | Desarrollo Web Profesional",
     },
 
     description:
-        "Portfolio profesional de Gabriel Brindo — Desarrollador Web Full Stack: React, Next.js, Tailwind CSS, PHP y más. Proyectos reales, código limpio y soluciones orientadas a resultados.",
+        "Gabriel Brindo — Desarrollador Web Full Stack en Argentina especializado en React, Next.js y Laravel. Desarrollo aplicaciones modernas, escalables y optimizadas. Disponible para oportunidades laborales.",
 
     keywords: [
-        "Desarrollador Web Full Stack",
-        "React Developer Portfolio",
-        "Next.js Resume",
-        "Developer Argentina",
-        "UI/UX + Frontend",
-        "Web Performance",
+        "Desarrollador Web Argentina",
+        "Desarrollador React Argentina",
+        "Desarrollador Next.js",
+        "Desarrollador Laravel Argentina",
+        "Portfolio Full Stack Developer",
+        "Programador Web Buenos Aires",
     ],
 
     authors: [
@@ -103,16 +103,56 @@ export default function RootLayout({
     return (
         <html lang="es" className="scroll-smooth" suppressHydrationWarning>
             <head>
-                <meta name="theme-color" content="#1a1410" />
-                <meta name="robots" content="noindex, nofollow" />
-                <meta name="googlebot" content="noindex, nofollow" />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Person",
+                            "@id": "https://www.gabrielbrindo.com.ar/#gabrielbrindo",
+                            name: "Gabriel Brindo",
+                            url: "https://www.gabrielbrindo.com.ar",
+                            image: "https://www.gabrielbrindo.com.ar/images/og-image.jpg",
+                            jobTitle: "Desarrollador Web Full Stack",
+                            description:
+                                "Desarrollador Web Full Stack especializado en React, Next.js y Laravel. Disponible para oportunidades laborales en Argentina.",
+                            address: {
+                                "@type": "PostalAddress",
+                                addressLocality: "Buenos Aires",
+                                addressCountry: "AR",
+                            },
+                            sameAs: [
+                                "https://www.linkedin.com/in/gabrielsebastianbrindo",
+                            ],
+                        }),
+                    }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Website",
+                            "@id": "https://www.gabrielbrindo.com.ar/#website",
+                            url: "https://www.gabrielbrindo.com.ar",
+                            name: "Gabriel Brindo - Portfolio",
+                            description:
+                                "Portfolio profesional de Gabriel Brindo, desarrollador web full stack en Argentina especializado en React, Next.js y Laravel.",
+                            publisher: {
+                                "@type": "Person",
+                                name: "Gabriel Brindo",
+                            },
+                            inLanguage: "es-AR",
+                        }),
+                    }}
+                />
             </head>
             <body
                 suppressHydrationWarning
                 className={`${medievalSharp.className} antialiased test-cursor scroll-smooth`}
             >
                 {children}
-                <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js" />
+                <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js" />
             </body>
         </html>
     );
