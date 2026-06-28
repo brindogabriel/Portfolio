@@ -92,7 +92,6 @@ title: {
         card: "summary_large_image",
         site: "@gabriel_brindo",
         creator: "@gabriel_brindo",
-url: "https://x.com/gabriel_brindo",
         title:
             "Gabriel Brindo | Desarrollador Web Full Stack | React, Next.js y Laravel",
 
