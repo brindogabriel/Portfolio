@@ -12,14 +12,13 @@ const medievalSharp = MedievalSharp({
 export const metadata: Metadata = {
     metadataBase: new URL("https://www.gabrielbrindo.com.ar"),
 
-    title: {
-        default:
-            "Gabriel Brindo | Desarrollador Web Full Stack | React, Next.js y Laravel",
-        template: "%s | Gabriel Brindo",
-    },
+title: {
+    default: "Gabriel Brindo | Desarrollador Full Stack",
+    template: "%s | Gabriel Brindo",
+},
 
     description:
-        "Desarrollador Web Full Stack especializado en React, Next.js y Laravel. Desarrollo aplicaciones web modernas, rápidas y escalables.",
+        "Desarrollador Web Full Stack especializado en React, Next.js y Laravel. Buscando nuevas oportunidades para desarrollar aplicaciones modernas y escalables.",
 
     applicationName: "Gabriel Brindo Portfolio",
 
@@ -93,7 +92,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         site: "@gabriel_brindo",
         creator: "@gabriel_brindo",
-
+url: "https://x.com/gabriel_brindo",
         title:
             "Gabriel Brindo | Desarrollador Web Full Stack | React, Next.js y Laravel",
 
