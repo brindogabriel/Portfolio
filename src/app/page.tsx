@@ -115,66 +115,74 @@ export default function Home() {
                 </div>
             </header>
 
-            {/* Hero Section */}
-            <section
-                id="inicio"
-                className="pt-24 pb-16 md:pt-32 md:pb-24 bg-[url('/images/fondobanner.png')] bg-cover bg-center relative"
-            >
-                <div className="absolute inset-0 bg-[#1a1410]/80"></div>
+<section
+    id="inicio"
+    className="pt-24 pb-16 md:pt-32 md:pb-24 bg-[url('/images/fondobanner.png')] bg-cover bg-center relative"
+>
+    <div className="absolute inset-0 bg-[#1a1410]/80"></div>
 
-                <div className="container mx-auto px-4 relative z-10">
-                    <div className="max-w-3xl mx-auto text-center">
-                        {/* Disponibilidad */}
-                        <div className="mb-6 text-sm md:text-base text-[#e8d0b0]/80">
-                            📍 Buenos Aires, Argentina <br />
-                            <span className="text-[#c19a49] font-semibold">
-                                Disponible para empleo full-time
-                            </span>
-                        </div>
+    <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-3xl mx-auto text-center">
 
-                        {/* Nombre + Rol */}
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-[#e8d0b0] leading-tight">
-                            Gabriel Brindo
-                            <span className="block text-[#c19a49] mt-2">
-                                Desarrollador Web Full Stack
-                            </span>
-                        </h1>
+            {/* Disponibilidad */}
+            <div className="mb-6 text-sm md:text-base text-[#e8d0b0]/80">
+                📍 Buenos Aires, Argentina
+                <br />
+                <span className="text-[#c19a49] font-semibold">
+                    Disponible para oportunidades laborales Full-Time y proyectos Freelance
+                </span>
+            </div>
 
-                        {/* Propuesta de valor */}
-                        <p className="text-xl mb-6 text-[#e8d0b0]/80">
-                            Desarrollo aplicaciones web modernas y escalables
-                            con React, Next.js y Laravel. Enfocado en
-                            rendimiento, arquitectura limpia y soluciones
-                            orientadas a negocio.
-                        </p>
+            {/* Nombre + Rol */}
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-[#e8d0b0] leading-tight">
+                Gabriel Brindo
+                <span className="block text-[#c19a49] mt-2">
+                    Desarrollador Web Full Stack
+                </span>
+            </h1>
 
-                        {/* Stack visible */}
-                        <p className="text-sm text-[#e8d0b0]/60 mb-8">
-                            React · Next.js · Laravel · TypeScript · Tailwind ·
-                            APIs REST · SEO
-                        </p>
+            {/* Descripción */}
+            <p className="text-xl mb-6 text-[#e8d0b0]/80">
+                Desarrollo aplicaciones web modernas, rápidas y escalables
+                utilizando React, Next.js, Laravel y TypeScript. Me enfoco en
+                crear soluciones de calidad con código limpio, alto rendimiento
+                y una excelente experiencia de usuario.
+            </p>
 
-                        {/* Botones */}
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <SmoothScrollLink href="#proyectos">
-                                <Button className="bg-[#c19a49] hover:bg-[#a17a29] text-[#1a1410] font-bold w-full">
-                                    Ver Proyectos
-                                    <ArrowRight className="ml-2 h-4 w-4" />
-                                </Button>
-                            </SmoothScrollLink>
+            {/* Disponibilidad profesional */}
+            <p className="text-base text-[#c19a49] font-medium mb-8">
+                Actualmente busco incorporarme a un equipo de desarrollo donde
+                pueda aportar valor, seguir aprendiendo y crecer
+                profesionalmente.
+            </p>
 
-                            <SmoothScrollLink href="#contacto">
-                                <Button
-                                    variant="outline"
-                                    className="border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20 w-full"
-                                >
-                                    Contactar
-                                </Button>
-                            </SmoothScrollLink>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/* Stack */}
+            <p className="text-sm text-[#e8d0b0]/60 mb-8">
+                React • Next.js • Laravel • TypeScript • Tailwind CSS • PHP •
+                Supabase • REST APIs • SEO • Git
+            </p>
+
+            {/* Botones */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <SmoothScrollLink href="#proyectos">
+                    <Button className="bg-[#c19a49] hover:bg-[#a17a29] text-[#1a1410] font-bold w-full">
+                        Explorar proyectos
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                </SmoothScrollLink>
+
+                <SmoothScrollLink href="#contacto">
+                    <Button
+                        variant="outline"
+                        className="border-[#c19a49] text-[#c19a49] hover:bg-[#c19a49]/20 w-full"
+                    >
+                        Contactarme
+                    </Button>
+                </SmoothScrollLink>
+            </div>
+        </div>
+    </div>
+</section>
             {/* Skills Section */}
             <section id="habilidades" className="py-16 bg-[#2a1e18]">
                 <div className="container mx-auto px-4">
